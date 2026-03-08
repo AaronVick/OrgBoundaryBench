@@ -1,0 +1,11 @@
+# Predictive-Control Misalignment Engine (PRD-20) — Empirical Test Family D
+# n=8, control_proxy=greedy_on_perturbed
+
+## Report
+m_n: 0.000000
+n_blocks_pred: 1
+n_blocks_ctrl: 1
+override_success_stub: 1.0000
+recovery_time_stub: 1.0000
+confusion_stub: 0.0000
+pass: True

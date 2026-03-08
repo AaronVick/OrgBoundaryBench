@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reflective-samples-org/schemas/task.schema.json",
+  "title": "OpenClaw Benchmark Task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "dataset",
+    "task_family",
+    "prompt",
+    "context_refs",
+    "gold_json",
+    "split",
+    "notes"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dataset": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_family": {
+      "type": "string",
+      "enum": [
+        "routing_and_ownership",
+        "escalation_and_review_path",
+        "disagreement_with_responsibility",
+        "provenance_and_evidence_sufficiency",
+        "reversible_next_step",
+        "drift_failure_warning",
+        "software_org_workflow",
+        "challengeability_contestability",
+        "custom"
+      ]
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "context_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "gold_json": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "split": {
+      "type": "string",
+      "enum": [
+        "train",
+        "val",
+        "test"
+      ]
+    },
+    "notes": {
+      "type": [
+        "object",
+        "string"
+      ]
+    }
+  }
+}

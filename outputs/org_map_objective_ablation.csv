@@ -1,0 +1,6 @@
+objective,selected_partition,selected_category,n_blocks,block_balance,objective_score,nmi,ari,macro_f1_best_match,stress_pass,leverage_pass,rival_dominance_pass,mean_D,ci_lower,governance_preservation_pass
+closure_only,one_block,trivial,1,0.000000,0.00000000,0.000000,0.000000,0.006516,True,True,False,-0.782217,-0.782217,False
+closure_plus_robust,one_block,trivial,1,0.000000,0.00000000,0.000000,0.000000,0.006516,True,True,False,-0.782217,-0.782217,False
+closure_plus_governance,singleton,trivial,120,1.000000,0.04316953,0.782217,0.000000,1.000000,True,True,True,0.057478,0.057478,False
+closure_plus_factorization,one_block,trivial,1,0.000000,1.00000000,0.000000,0.000000,0.006516,True,True,False,-0.782217,-0.782217,False
+full_objective,singleton,trivial,120,1.000000,1.04316953,0.782217,0.000000,1.000000,True,True,True,0.057478,0.057478,False

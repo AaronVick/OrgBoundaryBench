@@ -1,0 +1,31 @@
+# PRD-23: Nontrivial Boundary on Public Labeled Graphs
+# Source: synthetic, n=10
+# J(q) = alpha*E_cl + eta*Cost(q); alpha=1.0, eta=0.5
+
+## Leaderboard (lower J better)
+
+1. singleton: n_blocks=10, E_cl=0.000000, cost=0.100000, J=0.050000, Q=0.034267
+2. spectral: n_blocks=2, E_cl=0.031161, cost=0.500000, J=0.281161, Q=0.038012
+3. one_block: n_blocks=1, E_cl=0.000000, cost=1.000000, J=0.500000, Q=-0.000000
+4. q_star: n_blocks=1, E_cl=0.000000, cost=1.000000, J=0.500000, Q=0.000000
+5. Louvain: n_blocks=1, E_cl=0.000000, cost=1.000000, J=0.500000, Q=-0.000000
+6. random_0: n_blocks=1, E_cl=0.000000, cost=1.000000, J=0.500000, Q=-0.000000
+7. random_1: n_blocks=1, E_cl=0.000000, cost=1.000000, J=0.500000, Q=-0.000000
+
+## External agreement (vs ground-truth labels)
+
+| Candidate | NMI | ARI | macro_F1 |
+|-----------|-----|-----|----------|
+| singleton | 0.6180 | 0.0000 | 0.0000 |
+| spectral | 0.0314 | -0.1134 | 0.2619 |
+| one_block | 0.0000 | 0.0000 | 0.1111 |
+| q_star | 0.0000 | 0.0000 | 0.1111 |
+| Louvain | 0.0000 | 0.0000 | 0.1111 |
+| random_0 | 0.0000 | 0.0000 | 0.1111 |
+| random_1 | 0.0000 | 0.0000 | 0.1111 |
+
+## Success (harness): False
+## Meaningful boundary (nontrivial and agreement no worse than best baseline): False
+## q* n_blocks: 1
+
+## Statement: Useless collapse or below-baseline agreement (q* trivial or external agreement worse than best baseline).

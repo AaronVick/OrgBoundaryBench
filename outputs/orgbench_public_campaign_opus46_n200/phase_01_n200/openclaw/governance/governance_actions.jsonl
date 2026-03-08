@@ -1,0 +1,2 @@
+{"action": "Do not deploy. Re-run staged arms and pass null+leverage gates with preregistered thresholds.", "action_id": "A001", "blocking": true, "decision_id": "20260308T145944Z_openclaw_gov", "owner_role": "research_lead"}
+{"action": "No governance deployment claim allowed until math_governed beats sham_complexity by configured minimum delta.", "action_id": "A002", "blocking": true, "decision_id": "20260308T145944Z_openclaw_gov", "owner_role": "research_lead"}

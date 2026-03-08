@@ -1,0 +1,14 @@
+# Boundary Benchmark Harness (PRD-17) — Empirical Test Family A
+# Source: synthetic, n=12
+# J(q) = alpha*E_cl + eta*Cost(q); alpha=1.0, eta=0.5
+
+## Leaderboard (lower J better)
+
+1. singleton: n_blocks=12, E_cl=0.000000, cost=0.083333, J=0.041667, Q=0.018658
+2. Louvain: n_blocks=2, E_cl=0.012222, cost=0.500000, J=0.262222, Q=0.070169
+3. one_block: n_blocks=1, E_cl=0.000000, cost=1.000000, J=0.500000, Q=0.000000
+4. q_star: n_blocks=1, E_cl=0.000000, cost=1.000000, J=0.500000, Q=0.000000
+5. random_0: n_blocks=1, E_cl=0.000000, cost=1.000000, J=0.500000, Q=0.000000
+
+## Success (non-trivial q* beats one_block, singleton, Louvain, random): False
+## q* n_blocks: 1

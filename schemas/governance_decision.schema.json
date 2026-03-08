@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reflective-samples-org/schemas/governance_decision.schema.json",
+  "title": "OpenClaw Governance Decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "decision_id",
+    "generated_at",
+    "bundle_dir",
+    "recommendation",
+    "operating_mode",
+    "hard_failures",
+    "soft_failures",
+    "required_remediations",
+    "evidence",
+    "policy"
+  ],
+  "properties": {
+    "decision_id": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string", "minLength": 1 },
+    "bundle_dir": { "type": "string", "minLength": 1 },
+    "recommendation": {
+      "type": "string",
+      "enum": [
+        "BLOCK_DEPLOYMENT",
+        "LIMITED_SHADOW_ONLY",
+        "ALLOW_CONSTRAINED_DEPLOYMENT"
+      ]
+    },
+    "operating_mode": {
+      "type": "string",
+      "enum": [
+        "blocked",
+        "shadow",
+        "constrained_live"
+      ]
+    },
+    "hard_failures": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "soft_failures": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "required_remediations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "action", "owner_role", "blocking"],
+        "properties": {
+          "id": { "type": "string" },
+          "action": { "type": "string" },
+          "owner_role": { "type": "string" },
+          "blocking": { "type": "boolean" }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["report_json", "run_records_jsonl", "validation_report_json"],
+      "properties": {
+        "report_json": { "type": "string" },
+        "run_records_jsonl": { "type": "string" },
+        "validation_report_json": { "type": "string" }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["metric", "required_arms", "min_test_tasks_per_arm", "min_delta_vs_baseline", "max_ci_width", "require_gate_pass", "require_bundle_valid"],
+      "properties": {
+        "metric": { "type": "string" },
+        "required_arms": { "type": "array", "items": { "type": "string" } },
+        "min_test_tasks_per_arm": { "type": "integer", "minimum": 1 },
+        "min_delta_vs_baseline": { "type": "number" },
+        "max_ci_width": { "type": "number" },
+        "require_gate_pass": { "type": "boolean" },
+        "require_bundle_valid": { "type": "boolean" }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-03-08T14:36:05.543845+00:00",
+  "split": "test",
+  "runs": {
+    "simple_graph": {
+      "run_id": "20260308T143605Z_simple_graph",
+      "metrics": {
+        "accuracy": {
+          "value": 0.5,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        },
+        "macro_f1": {
+          "value": 0.3333333333333333,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        },
+        "balanced_accuracy": {
+          "value": 0.5,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        }
+      }
+    },
+    "sham_complexity": {
+      "run_id": "20260308T143605Z_sham_complexity",
+      "metrics": {
+        "accuracy": {
+          "value": 0.5,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        },
+        "macro_f1": {
+          "value": 0.3333333333333333,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        },
+        "balanced_accuracy": {
+          "value": 0.5,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        }
+      }
+    },
+    "math_governed": {
+      "run_id": "20260308T143603Z_math_governed",
+      "metrics": {
+        "accuracy": {
+          "value": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 2
+        },
+        "macro_f1": {
+          "value": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 2
+        },
+        "balanced_accuracy": {
+          "value": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 2
+        }
+      }
+    },
+    "plain_llm_rag": {
+      "run_id": "20260308T143603Z_plain_llm_rag",
+      "metrics": {
+        "accuracy": {
+          "value": 0.5,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        },
+        "macro_f1": {
+          "value": 0.3333333333333333,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        },
+        "balanced_accuracy": {
+          "value": 0.5,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        }
+      }
+    },
+    "plain_llm": {
+      "run_id": "20260308T143603Z_plain_llm",
+      "metrics": {
+        "accuracy": {
+          "value": 0.5,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        },
+        "macro_f1": {
+          "value": 0.3333333333333333,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        },
+        "balanced_accuracy": {
+          "value": 0.5,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        }
+      }
+    }
+  }
+}

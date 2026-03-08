@@ -1,0 +1,80 @@
+{
+  "rows": [
+    {
+      "arm": "simple_graph",
+      "run_id": "20260308T145349Z_simple_graph",
+      "metric": "accuracy",
+      "value": 0.16666666666666666,
+      "ci_low": 0.0,
+      "ci_high": 0.4166666666666667,
+      "n": 12
+    },
+    {
+      "arm": "sham_complexity",
+      "run_id": "20260308T145318Z_sham_complexity",
+      "metric": "accuracy",
+      "value": 0.16666666666666666,
+      "ci_low": 0.0,
+      "ci_high": 0.4166666666666667,
+      "n": 12
+    },
+    {
+      "arm": "math_governed",
+      "run_id": "20260308T145255Z_math_governed",
+      "metric": "accuracy",
+      "value": 0.3333333333333333,
+      "ci_low": 0.16458333333333336,
+      "ci_high": 0.6666666666666666,
+      "n": 12
+    },
+    {
+      "arm": "plain_llm_rag",
+      "run_id": "20260308T145228Z_plain_llm_rag",
+      "metric": "accuracy",
+      "value": 0.3333333333333333,
+      "ci_low": 0.16458333333333336,
+      "ci_high": 0.6666666666666666,
+      "n": 12
+    },
+    {
+      "arm": "plain_llm",
+      "run_id": "20260308T145205Z_plain_llm",
+      "metric": "accuracy",
+      "value": 0.16666666666666666,
+      "ci_low": 0.0,
+      "ci_high": 0.4166666666666667,
+      "n": 12
+    }
+  ],
+  "gate_pass": false,
+  "audit": {
+    "audit_id": "20260308T145413Z",
+    "pass": false,
+    "headline": {
+      "metric": "accuracy",
+      "math_governed": 0.3333333333333333,
+      "baseline_metrics": {
+        "plain_llm": 0.16666666666666666,
+        "plain_llm_rag": 0.3333333333333333,
+        "sham_complexity": 0.16666666666666666,
+        "simple_graph": 0.16666666666666666
+      },
+      "best_baseline": 0.3333333333333333,
+      "delta_vs_best_baseline": 0.0
+    },
+    "null": {
+      "n_permutations": 500,
+      "p_value": 0.65,
+      "pass": false
+    },
+    "leverage": {
+      "degree_cutoff_90pct": 1.0,
+      "delta_full": 0.0,
+      "delta_without_top_degree": 0.0,
+      "delta_drop": 0.0,
+      "pass": false
+    }
+  },
+  "headline_csv": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_opus46_n80/phase_01_n80/reports/headline_table.csv",
+  "headline_md": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_opus46_n80/phase_01_n80/reports/headline_report.md"
+}

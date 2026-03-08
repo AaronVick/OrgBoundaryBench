@@ -1,0 +1,9 @@
+metric,measured_now,signal_quality,noise_risk,duplicative_with_other_metrics,captures_structural_governance_advantage,audit_note
+routing_accuracy,YES (proxy: accuracy),MEDIUM,MEDIUM,PARTIAL (balanced_accuracy),PARTIAL,"Captured, but only as end-label accuracy."
+reviewer_suggestion_accuracy,NO,N/A,N/A,N/A,NO,Not instrumented in current task schema.
+provenance_completeness,NO,N/A,N/A,N/A,YES,Missing metric for claimed accountable authority.
+challengeability,NO,N/A,N/A,N/A,YES,Not scored in this harness.
+reversibility_quality,NO,N/A,N/A,N/A,YES,Not scored in current outputs.
+responsibility_clarity,NO,N/A,N/A,N/A,YES,Only deployment-level governance artifact has owner roles.
+governance_composite,NO,N/A,N/A,N/A,YES,Absent from per-task scoring.
+overall_score_weighting,YES (implicit single headline),LOW for governance claims,MEDIUM,HIGH,LOW,Current weighting can flatten true governance differences.

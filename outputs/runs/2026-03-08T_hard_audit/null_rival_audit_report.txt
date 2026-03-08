@@ -1,0 +1,5 @@
+# PRD II: Null-Model and Rival-Theory Audit
+Perf(q*): -0.500000
+max(baselines U nulls): -0.041667
+D: -0.458333
+Pass (D > 0): False

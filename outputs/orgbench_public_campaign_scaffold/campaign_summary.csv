@@ -1,0 +1,2 @@
+phase,max_nodes,gate_pass,math_governed_metric,best_baseline_metric,delta_vs_best,governance_recommendation
+phase_01_n40,40,False,1.0,0.5,0.5,BLOCK_DEPLOYMENT

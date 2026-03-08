@@ -1,0 +1,15 @@
+{
+  "run_id": "20260308T143603Z_plain_llm",
+  "arm": "plain_llm",
+  "backend": "local_heuristic",
+  "model_provider": "local-simulated",
+  "model_name": "local_prompt_model_v1",
+  "model_version": "1.0",
+  "temperature": 0.0,
+  "seed": 42,
+  "config_hash": "21a1fbec30656009",
+  "prompt_hash": "1f39ef36071f94d2",
+  "rag_hash": "8309d07c9a000a88",
+  "dataset_version": "kernel.npz:n=40",
+  "evaluation_timestamp": "2026-03-08T14:36:03.903405+00:00"
+}

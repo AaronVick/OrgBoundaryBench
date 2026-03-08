@@ -1,0 +1,237 @@
+{
+  "best_baseline_E_lg": {
+    "E_lg": 0.04916824196597351,
+    "name": "singleton",
+    "nmi": 0.8176920268486946
+  },
+  "claim_unlocked": false,
+  "dataset": {
+    "dataset_npz": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/data/processed/email_eu_core/kernel.npz",
+    "n": 80,
+    "n_labels": 26,
+    "n_original": 400
+  },
+  "decision": "FAIL",
+  "external_perm_p_values": {
+    "ari_p_value": 0.0,
+    "ari_star": 0.08201639482802332,
+    "f1_p_value": 0.4,
+    "f1_star": 0.006868131868131867,
+    "nmi_p_value": 0.0,
+    "nmi_star": 0.35892919773274223
+  },
+  "framework_search": {
+    "seed_eval": {
+      "E_lg": 0.214367960043822,
+      "n_blocks": 3
+    },
+    "trace": [
+      {
+        "E_lg": 0.25357233000173407,
+        "action": "seed_spectral",
+        "n_blocks": 2,
+        "step": 0
+      },
+      {
+        "E_lg": 0.214367960043822,
+        "action": "split_block_1",
+        "delta": 0.03920436995791207,
+        "n_blocks": 3,
+        "step": 1
+      },
+      {
+        "E_lg": 0.214367960043822,
+        "action": "stop_no_improving_split",
+        "n_blocks": 3,
+        "step": 2
+      }
+    ]
+  },
+  "null_rival": {
+    "best_rival_name_full": "singleton",
+    "best_rival_nmi_full": 0.8176920268486946,
+    "ci_lower": -0.5163310138167876,
+    "ci_upper": -0.40170141846166085,
+    "mean_D": -0.4546362333002208,
+    "n_bootstrap": 50,
+    "pass": false,
+    "star_nmi_full": 0.35892919773274223,
+    "std_D": 0.031972906871858636
+  },
+  "q_star": {
+    "E_cl": 0.16498524399443928,
+    "E_lg": 0.214367960043822,
+    "E_rob_proxy": 0.20848218697850665,
+    "ari": 0.08201639482802332,
+    "block_balance": 0.946394630357186,
+    "contestability_proxy": 0.6666666666666666,
+    "delta_gov_proxy": 0.2222222222222222,
+    "delta_otimes_proxy": null,
+    "macro_f1": 0.006868131868131867,
+    "n_blocks": 3,
+    "name": "q_star",
+    "nmi": 0.35892919773274223,
+    "responsibility_residue": 0.0
+  },
+  "required_outputs": [
+    "organizational_design_map_report.md",
+    "boundary_leaderboard.csv",
+    "external_agreement_report.md",
+    "stress_robustness_report.md",
+    "null_rival_audit_report.md",
+    "governance_preservation_report.md",
+    "temporal_drift_report.md",
+    "organizational_map_summary.json"
+  ],
+  "stress": {
+    "records": [
+      {
+        "E_lg": 0.13490845795391593,
+        "delta_E_lg_abs": 0.07945950208990607,
+        "delta_nmi_abs": 0.0,
+        "family": "noise",
+        "n_blocks": 3,
+        "nmi": 0.35892919773274223,
+        "severity": 0.02
+      },
+      {
+        "E_lg": 0.09893426905931214,
+        "delta_E_lg_abs": 0.11543369098450985,
+        "delta_nmi_abs": 0.0,
+        "family": "noise",
+        "n_blocks": 3,
+        "nmi": 0.35892919773274223,
+        "severity": 0.05
+      },
+      {
+        "E_lg": 0.22422620960921463,
+        "delta_E_lg_abs": 0.009858249565392635,
+        "delta_nmi_abs": 0.0,
+        "family": "missingness",
+        "n_blocks": 3,
+        "nmi": 0.35892919773274223,
+        "severity": 0.05
+      },
+      {
+        "E_lg": 0.23566184118322805,
+        "delta_E_lg_abs": 0.021293881139406057,
+        "delta_nmi_abs": 0.0,
+        "family": "missingness",
+        "n_blocks": 3,
+        "nmi": 0.35892919773274223,
+        "severity": 0.1
+      },
+      {
+        "E_lg": 0.214367960043822,
+        "delta_E_lg_abs": 0.0,
+        "delta_nmi_abs": 0.0,
+        "family": "workload_scale",
+        "n_blocks": 3,
+        "nmi": 0.35892919773274223,
+        "severity": 1.1
+      },
+      {
+        "E_lg": 0.21436796004382191,
+        "delta_E_lg_abs": 8.326672684688674e-17,
+        "delta_nmi_abs": 0.0,
+        "family": "workload_scale",
+        "n_blocks": 3,
+        "nmi": 0.35892919773274223,
+        "severity": 1.2
+      },
+      {
+        "E_lg": 0.24860900734084215,
+        "delta_E_lg_abs": 0.034241047297020155,
+        "delta_nmi_abs": 0.0026820526372346998,
+        "family": "node_drop_random",
+        "n_blocks": 3,
+        "nmi": 0.35624714509550753,
+        "severity": 0.05
+      },
+      {
+        "E_lg": 0.21600497229274415,
+        "delta_E_lg_abs": 0.001637012248922154,
+        "delta_nmi_abs": 0.002508967588867317,
+        "family": "node_drop_random",
+        "n_blocks": 3,
+        "nmi": 0.3564202301438749,
+        "severity": 0.05
+      },
+      {
+        "E_lg": 0.22143846206748474,
+        "delta_E_lg_abs": 0.007070502023662745,
+        "delta_nmi_abs": 0.008078130669992578,
+        "family": "node_drop_top_degree",
+        "n_blocks": 3,
+        "nmi": 0.3670073284027348,
+        "severity": 0.05
+      },
+      {
+        "E_lg": 0.1984066575287153,
+        "delta_E_lg_abs": 0.01596130251510669,
+        "delta_nmi_abs": 0.011463095285933034,
+        "family": "node_drop_random",
+        "n_blocks": 3,
+        "nmi": 0.37039229301867527,
+        "severity": 0.1
+      },
+      {
+        "E_lg": 0.2961021671099443,
+        "delta_E_lg_abs": 0.0817342070661223,
+        "delta_nmi_abs": 0.013483692793879065,
+        "family": "node_drop_random",
+        "n_blocks": 3,
+        "nmi": 0.3724128905266213,
+        "severity": 0.1
+      },
+      {
+        "E_lg": 0.2601765833518963,
+        "delta_E_lg_abs": 0.04580862330807431,
+        "delta_nmi_abs": 0.005720523566610847,
+        "family": "node_drop_top_degree",
+        "n_blocks": 3,
+        "nmi": 0.3646497212993531,
+        "severity": 0.1
+      },
+      {
+        "E_lg": 0.21546674368044832,
+        "delta_E_lg_abs": 0.001098783636626327,
+        "delta_nmi_abs": 0.0,
+        "family": "edge_drop",
+        "n_blocks": 3,
+        "nmi": 0.35892919773274223,
+        "severity": 0.05
+      },
+      {
+        "E_lg": 0.22155436535173437,
+        "delta_E_lg_abs": 0.007186405307912369,
+        "delta_nmi_abs": 0.0,
+        "family": "edge_drop",
+        "n_blocks": 3,
+        "nmi": 0.35892919773274223,
+        "severity": 0.1
+      }
+    ],
+    "summary": {
+      "S_max": 0.11543369098450985,
+      "leverage_pass": true,
+      "leverage_random_mean_delta": 0.033393392281792826,
+      "leverage_ratio": 0.791760311200623,
+      "leverage_ratio_threshold": 2.0,
+      "leverage_top_degree_mean_delta": 0.026439562665868527,
+      "n_cases": 14,
+      "stability_threshold": 0.2,
+      "stable_fraction": 1.0,
+      "stress_pass": true
+    }
+  },
+  "temporal_status": "not_run_missing_dataset",
+  "tests": {
+    "A_nontrivial_boundary": true,
+    "B_external_agreement": false,
+    "C_stress_robustness": true,
+    "D_null_rival_dominance": false,
+    "E_temporal_drift": false,
+    "F_governance_preservation": false
+  }
+}

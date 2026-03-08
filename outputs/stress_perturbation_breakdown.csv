@@ -1,0 +1,5 @@
+perturbation,n_cases,mean_delta_E_lg,max_delta_E_lg,notes
+node_drop_random,4,0.034590,0.124337,from live PRD-30 stress records
+node_drop_top_degree,2,0.069209,0.127620,from live PRD-30 stress records
+edge_drop,2,0.020405,0.032948,from live PRD-30 stress records
+block_fragmentation,6,0.023010,0.108743,largest-block split perturbations

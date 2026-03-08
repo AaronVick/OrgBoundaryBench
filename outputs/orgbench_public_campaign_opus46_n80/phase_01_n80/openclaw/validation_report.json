@@ -1,0 +1,17 @@
+{
+  "bundle_dir": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_opus46_n80/phase_01_n80/openclaw",
+  "checks": {
+    "claim_status": "DO_NOT_PROMOTE",
+    "gate_pass": false,
+    "run_records_count": 5,
+    "task_records_count": 80
+  },
+  "created_at": "2026-03-08T14:54:13.722443+00:00",
+  "errors": [],
+  "schemas": {
+    "report": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/schemas/report.schema.json",
+    "run": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/schemas/run.schema.json",
+    "task": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/schemas/task.schema.json"
+  },
+  "valid": true
+}

@@ -1,0 +1,12 @@
+# Phase Monitoring (PRD-22) — Empirical Test Family F
+# n=8, n_steps=4, abrupt_threshold=0.8, rising_window=2
+
+## Trajectory (step, n_blocks, E_cl, nmi_prev)
+
+  step=0 n_blocks=1 E_cl=0.000000 nmi_prev=—
+  step=1 n_blocks=1 E_cl=0.000000 nmi_prev=1.0000
+  step=2 n_blocks=1 E_cl=0.000000 nmi_prev=1.0000
+  step=3 n_blocks=1 E_cl=0.000000 nmi_prev=1.0000
+
+## Flags (rising_closure, abrupt_switch)
+  (none)

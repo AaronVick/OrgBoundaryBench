@@ -1,0 +1,8 @@
+{
+  "skill": "orgbench-openclaw-skill",
+  "action": "run_governance_operator",
+  "bundle_dir": "outputs/orgbench_real_local/openclaw",
+  "out_dir": "outputs/orgbench_real_local/openclaw/governance",
+  "policy": "skill/governance_policy.json",
+  "exit_on_block": false
+}

@@ -1,0 +1,15 @@
+{
+  "run_id": "20260308T145452Z_plain_llm",
+  "arm": "plain_llm",
+  "backend": "anthropic",
+  "model_provider": "anthropic",
+  "model_name": "claude-opus-4-6",
+  "model_version": "4.6",
+  "temperature": 0.0,
+  "seed": 42,
+  "config_hash": "9d9fa1380df7ea28",
+  "prompt_hash": "1f39ef36071f94d2",
+  "rag_hash": "8309d07c9a000a88",
+  "dataset_version": "kernel.npz:n=200",
+  "evaluation_timestamp": "2026-03-08T14:55:51.096681+00:00"
+}

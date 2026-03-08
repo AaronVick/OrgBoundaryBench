@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "bundle_dir": "outputs/orgbench_real_local/openclaw",
+  "artifacts": {
+    "tasks": "task_records.jsonl",
+    "runs": "run_records.jsonl",
+    "report": "report.json",
+    "validation": "validation_report.json"
+  },
+  "gate_pass": false,
+  "claim_status": "DO_NOT_PROMOTE",
+  "negative_result_reporting": true
+}

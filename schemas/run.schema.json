@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reflective-samples-org/schemas/run.schema.json",
+  "title": "OpenClaw Benchmark Run",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "arm",
+    "backend",
+    "split",
+    "model_identity",
+    "metrics",
+    "artifact_paths",
+    "status"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "arm": {
+      "type": "string",
+      "enum": [
+        "plain_llm",
+        "plain_llm_rag",
+        "math_governed",
+        "sham_complexity",
+        "simple_graph"
+      ]
+    },
+    "backend": {
+      "type": "string",
+      "minLength": 1
+    },
+    "split": {
+      "type": "string",
+      "enum": [
+        "train",
+        "val",
+        "test"
+      ]
+    },
+    "model_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model_provider",
+        "model_name",
+        "model_version",
+        "temperature",
+        "seed",
+        "config_hash",
+        "prompt_hash",
+        "rag_hash",
+        "dataset_version",
+        "evaluation_timestamp"
+      ],
+      "properties": {
+        "model_provider": { "type": "string", "minLength": 1 },
+        "model_name": { "type": "string", "minLength": 1 },
+        "model_version": { "type": "string", "minLength": 1 },
+        "temperature": { "type": "number" },
+        "seed": { "type": "integer" },
+        "config_hash": { "type": "string", "minLength": 1 },
+        "prompt_hash": { "type": "string", "minLength": 1 },
+        "rag_hash": { "type": "string", "minLength": 1 },
+        "dataset_version": { "type": "string", "minLength": 1 },
+        "evaluation_timestamp": { "type": "string", "minLength": 1 }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["accuracy", "macro_f1", "balanced_accuracy"],
+      "properties": {
+        "accuracy": { "$ref": "#/$defs/metric" },
+        "macro_f1": { "$ref": "#/$defs/metric" },
+        "balanced_accuracy": { "$ref": "#/$defs/metric" }
+      }
+    },
+    "artifact_paths": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["predictions_jsonl", "run_identity_json"],
+      "properties": {
+        "predictions_jsonl": { "type": "string", "minLength": 1 },
+        "run_identity_json": { "type": "string", "minLength": 1 }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["completed", "failed", "running"]
+    }
+  },
+  "$defs": {
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "ci_low", "ci_high", "n"],
+      "properties": {
+        "value": { "type": "number" },
+        "ci_low": { "type": "number" },
+        "ci_high": { "type": "number" },
+        "n": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "model_provider": "N/A (non-LLM run)",
+  "model_name": "run_usecase_viii_identity.py",
+  "model_version": "1.0",
+  "api_or_local_backend": "local",
+  "temperature": null,
+  "top_p": null,
+  "seed": 42,
+  "context_window": null,
+  "embedding_model": null,
+  "reranker_model": null,
+  "tooling_enabled": [],
+  "prompt_hash": null,
+  "retrieval_config_hash": null,
+  "config_hash": "67ed82d5289f0f11",
+  "git_commit": "unknown",
+  "dataset_version": "synthetic",
+  "evaluation_timestamp": "2026-03-08T13:29:39.139946+00:00",
+  "python_version": "3.12.8"
+}

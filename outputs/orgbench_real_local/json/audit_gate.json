@@ -1,0 +1,28 @@
+{
+  "audit_id": "20260308T140741Z",
+  "headline": {
+    "metric": "accuracy",
+    "math_governed": 0.2,
+    "baseline_metrics": {
+      "plain_llm": 0.0,
+      "plain_llm_rag": 0.4,
+      "sham_complexity": 0.2,
+      "simple_graph": 0.0
+    },
+    "best_baseline": 0.4,
+    "delta_vs_best_baseline": -0.2
+  },
+  "null": {
+    "n_permutations": 200,
+    "p_value": 1.0,
+    "pass": false
+  },
+  "leverage": {
+    "degree_cutoff_90pct": 1.0,
+    "delta_full": -0.2,
+    "delta_without_top_degree": -0.2,
+    "delta_drop": 0.0,
+    "pass": false
+  },
+  "pass": false
+}

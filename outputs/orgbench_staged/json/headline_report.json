@@ -1,0 +1,80 @@
+{
+  "rows": [
+    {
+      "arm": "simple_graph",
+      "run_id": "20260308T135141Z_simple_graph",
+      "metric": "accuracy",
+      "value": 0.16666666666666666,
+      "ci_low": 0.0,
+      "ci_high": 0.4812499999999999,
+      "n": 12
+    },
+    {
+      "arm": "math_governed",
+      "run_id": "20260308T135141Z_math_governed",
+      "metric": "accuracy",
+      "value": 0.3333333333333333,
+      "ci_low": 0.16666666666666666,
+      "ci_high": 0.6479166666666665,
+      "n": 12
+    },
+    {
+      "arm": "plain_llm_rag",
+      "run_id": "20260308T135134Z_plain_llm_rag",
+      "metric": "accuracy",
+      "value": 0.3333333333333333,
+      "ci_low": 0.16666666666666666,
+      "ci_high": 0.6479166666666665,
+      "n": 12
+    },
+    {
+      "arm": "sham_complexity",
+      "run_id": "20260308T135134Z_sham_complexity",
+      "metric": "accuracy",
+      "value": 0.25,
+      "ci_low": 0.08333333333333333,
+      "ci_high": 0.5,
+      "n": 12
+    },
+    {
+      "arm": "plain_llm",
+      "run_id": "20260308T135134Z_plain_llm",
+      "metric": "accuracy",
+      "value": 0.16666666666666666,
+      "ci_low": 0.0,
+      "ci_high": 0.4812499999999999,
+      "n": 12
+    }
+  ],
+  "gate_pass": false,
+  "audit": {
+    "audit_id": "20260308T135153Z",
+    "pass": false,
+    "headline": {
+      "metric": "accuracy",
+      "math_governed": 0.3333333333333333,
+      "baseline_metrics": {
+        "plain_llm": 0.16666666666666666,
+        "plain_llm_rag": 0.3333333333333333,
+        "sham_complexity": 0.25,
+        "simple_graph": 0.16666666666666666
+      },
+      "best_baseline": 0.3333333333333333,
+      "delta_vs_best_baseline": 0.0
+    },
+    "null": {
+      "n_permutations": 200,
+      "p_value": 0.735,
+      "pass": false
+    },
+    "leverage": {
+      "degree_cutoff_90pct": 1.0,
+      "delta_full": 0.0,
+      "delta_without_top_degree": 0.0,
+      "delta_drop": 0.0,
+      "pass": false
+    }
+  },
+  "headline_csv": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_staged/reports/headline_table.csv",
+  "headline_md": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_staged/reports/headline_report.md"
+}

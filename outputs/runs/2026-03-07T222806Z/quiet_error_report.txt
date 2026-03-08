@@ -1,0 +1,20 @@
+# Quiet Error Detection Lab (PRD-19) — Empirical Test Family C
+# n=8, n_control=5, n_planted=5
+
+## Summary
+detection_rate: 0.0000
+false_reassurance_rate: 1.0000
+false_positive_rate: 0.0000
+pass: False
+
+## Per-case (has_error, flagged)
+  has_error=False flagged=False E_cl_ratio=0.0000 nmi=1.0000
+  has_error=False flagged=False E_cl_ratio=0.0000 nmi=1.0000
+  has_error=False flagged=False E_cl_ratio=0.0000 nmi=1.0000
+  has_error=False flagged=False E_cl_ratio=0.0000 nmi=1.0000
+  has_error=False flagged=False E_cl_ratio=0.0000 nmi=1.0000
+  has_error=True flagged=False E_cl_ratio=0.0000 nmi=1.0000
+  has_error=True flagged=False E_cl_ratio=0.0000 nmi=1.0000
+  has_error=True flagged=False E_cl_ratio=0.0000 nmi=1.0000
+  has_error=True flagged=False E_cl_ratio=0.0000 nmi=1.0000
+  has_error=True flagged=False E_cl_ratio=0.0000 nmi=1.0000

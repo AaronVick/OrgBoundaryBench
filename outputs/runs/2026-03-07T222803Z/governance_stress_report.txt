@@ -1,0 +1,16 @@
+# Governance Stress Test (PRD-18) — Empirical Test Family B
+# n=8, stability_nmi_min=0.5
+
+## Summary
+mean_nmi: 1.0000
+stable_fraction: 1.0000
+mean_E_cl_ratio_baseline_on_pert: 0.0000
+pass: True
+
+## Per-trial (family, trial, n_blocks_pert, E_cl_pert, nmi)
+  noise trial=0 n_blocks_pert=1 E_cl_pert=0.000000 nmi=1.0000
+  noise trial=1 n_blocks_pert=1 E_cl_pert=0.000000 nmi=1.0000
+  missingness trial=0 n_blocks_pert=1 E_cl_pert=0.000000 nmi=1.0000
+  missingness trial=1 n_blocks_pert=1 E_cl_pert=0.000000 nmi=1.0000
+  workload_scale trial=0 n_blocks_pert=1 E_cl_pert=0.000000 nmi=1.0000
+  workload_scale trial=1 n_blocks_pert=1 E_cl_pert=0.000000 nmi=1.0000

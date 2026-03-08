@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "boundary-org"
+version = "0.1.0"
+description = "Boundary-Preserving Organization in Dynamical Systems — empirical program (Vick 2025)"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.20",
+    "scipy>=1.7",
+    "scikit-learn>=1.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=6.0"]
+dev = ["pytest>=6.0"]
+data = ["networkx>=3.0"]
+rcti = ["gudhi>=3.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]

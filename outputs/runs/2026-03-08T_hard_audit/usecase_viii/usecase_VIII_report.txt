@@ -1,0 +1,31 @@
+# Usecase PRD VIII: Model Identity, Reproducibility, and Dev-Test Logging
+# Generated: 2026-03-08T13:29:39.139946+00:00
+
+## 1. Hypothesis
+Every run must be auditable by model/backend and configuration; no run counts as valid without full identity (useccases.md PRD VIII).
+
+## 2. Methods
+Emit structured identity block (run_identity.json) with model_provider, model_name, seed, config_hash, git_commit, dataset_version, evaluation_timestamp.
+For non-LLM runs we log script name, python version, seed, dataset_version; LLM runs would add model_provider, model_name, temperature, prompt_hash, etc.
+
+## 3. Public data used
+Dataset version: synthetic. No public dataset loaded in this identity-only run. For LLM runs, model_provider, model_name, model_version, temperature, prompt_hash, etc. must be set.
+
+## 4. Baseline
+N/A (identity contract only). Benchmark reports must group results by model/backend when multiple backends exist.
+
+## 5. Outcomes
+
+  config_hash: 67ed82d5289f0f11
+  git_commit: unknown
+  dataset_version: synthetic
+  evaluation_timestamp: 2026-03-08T13:29:39.139946+00:00
+
+Identity block written to run_identity.json. Pass: identity emitted.
+
+## 6. Falsification
+Runs without identity block are not valid for benchmark reporting.
+
+## 7. What would make this look good while still being wrong?
+• Model drift (e.g. API version change) masquerading as algorithmic improvement if identity is not logged.
+• Benchmark-generation model vs evaluated assistant model must be distinguished when both exist.

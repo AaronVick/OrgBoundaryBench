@@ -1,0 +1,63 @@
+{
+  "name": "orgbench-openclaw-skill",
+  "version": "1.0.0",
+  "description": "Portable OpenClaw-style benchmark skill for governed organizational AI evaluation with hard gate enforcement and reproducible outputs.",
+  "entrypoints": [
+    {
+      "id": "run_staged_orgbench",
+      "command": "python scripts/run_orgbench_staged.py",
+      "description": "Run staged Arm A/B/C benchmarking with resumable SQLite state."
+    },
+    {
+      "id": "export_openclaw_bundle",
+      "command": "python scripts/export_openclaw_bundle.py",
+      "description": "Export staged artifacts into schema-validated OpenClaw bundle."
+    },
+    {
+      "id": "run_governance_operator",
+      "command": "python scripts/run_openclaw_governance_agent.py",
+      "description": "Run enforceable governance decisioning (block/shadow/allow) over a bundle."
+    }
+  ],
+  "contracts": {
+    "task_schema": "schemas/task.schema.json",
+    "run_schema": "schemas/run.schema.json",
+    "report_schema": "schemas/report.schema.json",
+    "governance_decision_schema": "schemas/governance_decision.schema.json"
+  },
+  "required_capabilities": [
+    "ingest_public_or_local_corpus",
+    "build_sqlite_local_rag_index",
+    "run_plain_llm_arm",
+    "run_math_governed_arm",
+    "run_sham_complexity_arm",
+    "score_outputs_with_uncertainty",
+    "emit_findings_reports",
+    "log_model_identity",
+    "emit_governance_decision",
+    "emit_governance_remediation_actions"
+  ],
+  "strict_expectations": [
+    "no headline promotion without null_and_leverage_gate_pass",
+    "negative_results_must_be_reported",
+    "model_identity_required_for_each_run",
+    "artifacts_must_be_machine_readable"
+  ],
+  "io": {
+    "inputs": [
+      "workspace path containing staged OrgBench artifacts",
+      "taskset jsonl",
+      "run identities",
+      "evaluation and audit summaries"
+    ],
+    "outputs": [
+      "openclaw/task_records.jsonl",
+      "openclaw/run_records.jsonl",
+      "openclaw/report.json",
+      "openclaw/validation_report.json",
+      "openclaw/governance/governance_decision.json",
+      "openclaw/governance/governance_actions.jsonl",
+      "openclaw/governance/governance_brief.md"
+    ]
+  }
+}

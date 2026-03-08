@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "recommendation": "BLOCK_DEPLOYMENT",
+  "operating_mode": "blocked",
+  "decision": "outputs/orgbench_real_local/openclaw/governance/governance_decision.json",
+  "actions": "outputs/orgbench_real_local/openclaw/governance/governance_actions.jsonl",
+  "brief": "outputs/orgbench_real_local/openclaw/governance/governance_brief.md"
+}

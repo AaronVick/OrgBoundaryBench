@@ -1,0 +1,6 @@
+arm,run_id,metric,value,ci_low,ci_high,n,gate_pass
+simple_graph,20260308T143605Z_simple_graph,accuracy,0.5,0.0,1.0,2,False
+sham_complexity,20260308T143605Z_sham_complexity,accuracy,0.5,0.0,1.0,2,False
+math_governed,20260308T143603Z_math_governed,accuracy,1.0,1.0,1.0,2,False
+plain_llm_rag,20260308T143603Z_plain_llm_rag,accuracy,0.5,0.0,1.0,2,False
+plain_llm,20260308T143603Z_plain_llm,accuracy,0.5,0.0,1.0,2,False

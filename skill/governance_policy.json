@@ -1,0 +1,15 @@
+{
+  "metric": "accuracy",
+  "required_arms": [
+    "plain_llm",
+    "plain_llm_rag",
+    "math_governed",
+    "sham_complexity",
+    "simple_graph"
+  ],
+  "min_test_tasks_per_arm": 30,
+  "min_delta_vs_baseline": 0.02,
+  "max_ci_width": 0.40,
+  "require_gate_pass": true,
+  "require_bundle_valid": true
+}

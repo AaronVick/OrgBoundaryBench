@@ -1,0 +1,15 @@
+{
+  "run_id": "20260308T140455Z_sham_complexity",
+  "arm": "sham_complexity",
+  "backend": "local_ollama",
+  "model_provider": "local-ollama",
+  "model_name": "deepseek-r1:1.5b",
+  "model_version": "1.0",
+  "temperature": 0.0,
+  "seed": 42,
+  "config_hash": "8b66566e283acee3",
+  "prompt_hash": "1f39ef36071f94d2",
+  "rag_hash": "8309d07c9a000a88",
+  "dataset_version": "kernel.npz:n=60",
+  "evaluation_timestamp": "2026-03-08T14:05:37.666453+00:00"
+}

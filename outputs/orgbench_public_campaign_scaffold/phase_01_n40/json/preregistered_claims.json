@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-03-08T14:36:03.891671+00:00",
+  "scope": "benchmark-in-progress",
+  "arms": {
+    "A": "plain_llm",
+    "B": "math_governed",
+    "C": "sham_complexity",
+    "A_plus_rag": "plain_llm_rag",
+    "simple_graph": "simple_graph"
+  },
+  "primary_metric": "accuracy",
+  "hypotheses": [
+    "H1: math_governed > plain_llm on out-of-sample public tasks",
+    "H2: math_governed > plain_llm_rag on same split and budget",
+    "H3: math_governed > sham_complexity on same split and budget"
+  ],
+  "falsification": [
+    "Any required arm missing on same split -> no public superiority claim",
+    "Primary metric delta <= 0 vs any required baseline -> fail claim",
+    "Permutation null p-value > threshold -> fail claim",
+    "Top-degree leverage drop above threshold -> fail claim"
+  ],
+  "gates": {
+    "min_delta_vs_plain": 0.02,
+    "p_value_max": 0.05,
+    "leverage_drop_max": 0.03
+  },
+  "mandatory_outputs": [
+    "task metrics with uncertainty",
+    "null-world audit",
+    "outlier/leverage audit",
+    "model identity log",
+    "config hashes",
+    "dataset provenance",
+    "wrong-but-impressive section"
+  ]
+}

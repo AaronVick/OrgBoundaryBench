@@ -1,0 +1,62 @@
+{
+  "bundle_dir": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_staged/openclaw",
+  "decision_id": "20260308T142555Z_openclaw_gov",
+  "evidence": {
+    "report_json": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_staged/openclaw/report.json",
+    "run_records_jsonl": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_staged/openclaw/run_records.jsonl",
+    "validation_report_json": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_staged/openclaw/validation_report.json"
+  },
+  "generated_at": "2026-03-08T14:25:55.090017+00:00",
+  "hard_failures": [
+    "gate_failed",
+    "math_not_better_than_rag",
+    "sample_size_too_small"
+  ],
+  "operating_mode": "blocked",
+  "policy": {
+    "max_ci_width": 0.4,
+    "metric": "accuracy",
+    "min_delta_vs_baseline": 0.02,
+    "min_test_tasks_per_arm": 30,
+    "policy_hash": "436e052136a05e24",
+    "require_bundle_valid": true,
+    "require_gate_pass": true,
+    "required_arms": [
+      "plain_llm",
+      "plain_llm_rag",
+      "math_governed",
+      "sham_complexity",
+      "simple_graph"
+    ]
+  },
+  "recommendation": "BLOCK_DEPLOYMENT",
+  "required_remediations": [
+    {
+      "action": "Do not deploy. Re-run staged arms and pass null+leverage gates with preregistered thresholds.",
+      "blocking": true,
+      "id": "gate_failed",
+      "owner_role": "research_lead"
+    },
+    {
+      "action": "No governance deployment claim allowed until math_governed beats plain_llm_rag by configured minimum delta.",
+      "blocking": true,
+      "id": "math_not_better_than_rag",
+      "owner_role": "research_lead"
+    },
+    {
+      "action": "Increase task count per arm to policy minimum before deployment decision.",
+      "blocking": true,
+      "id": "sample_size_too_small",
+      "owner_role": "benchmark_operator"
+    },
+    {
+      "action": "Increase evaluation sample and bootstrap stability to narrow uncertainty intervals.",
+      "blocking": false,
+      "id": "ci_too_wide",
+      "owner_role": "benchmark_operator"
+    }
+  ],
+  "soft_failures": [
+    "ci_too_wide"
+  ]
+}

@@ -1,0 +1,5 @@
+case,driver,evidence,classification,scope
+external_agreement_fail,baseline stronger on department alignment,q_star_nmi=0.313592; louvain_nmi=0.724738,org_chart_alignment_gap,systematic
+null_rival_dominance_fail,negative D against rival set,mean_D=-0.487963; ci_lower=-0.531056; best_rival=singleton,standard_clustering_outperforms_on_external_metric,systematic
+stress_robustness_fail,leverage ratio marginally above threshold,leverage_ratio=2.000836; threshold=2.000000; S_max=0.127620,narrow_leverage_sensitivity,local
+temporal_missing_in_original_run,dataset absent at first PRD-30 run,original status: not_run_missing_dataset,data_availability_gap,infrastructure

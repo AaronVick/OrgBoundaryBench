@@ -1,0 +1,50 @@
+# Usecase PRD II: Null-Model, Rival-Theory, and Outlier Audit
+# Generated: 2026-03-08T02:19:55.394736+00:00
+
+## 1. Hypothesis
+The boundary/closure framework (q* from greedy coarse-graining) outperforms rival baselines and null
+worlds: D(q) = Perf(q*) - max(baselines U nulls) > 0. Results are not driven by leverage points:
+S(q) = max |Perf(q) - Perf(q^{-A})| remains below a pre-registered threshold under node/edge removal.
+
+## 2. Methods
+Null/Rival: Perf = -J(q) (internal) or NMI to ground-truth labels when provided. Baselines: one-block,
+singleton, Louvain. Nulls: random partitions (matched block count), label-permuted agreement when labels exist,
+graph-structure null (row-sum-preserving rewire). Leverage: random node/edge drop, plus top-degree node drop;
+recompute q* and Perf; S = max absolute change.
+Falsification (useccases.md PRD II): any main result that collapses under mild rewiring/shuffling or is
+driven by a tiny set of actors/windows is rejected.
+
+## 3. Public data used
+Synthetic: n=20, seed=42. No public dataset; for publication use --data with data/processed/email_eu_core (SNAP email-Eu-core) or equivalent.
+
+## 4. Baseline
+Rivals: one-block partition, singleton partition, Louvain. Nulls: random partition (matched k),
+label-permuted NMI (when labels available), row-sum-preserving rewire. Outlier: node/edge drop and top-degree drop.
+
+## 5. Outcomes
+
+Null/Rival (bootstrap):
+  mean_D: -0.518573
+  CI_lower: -0.518573, CI_upper: -0.518573
+  Pass (D > 0 with CI): False
+
+Outlier/Leverage stability:
+  S_max: 0.241139
+  threshold: 1.0
+  Pass (S_max < threshold): True
+
+Overall pass (null/rival and leverage): False
+
+## 6. Falsification
+If D ≤ 0: framework does not beat baselines/null; no claim. If S_max ≥ threshold: results sensitive to
+removal of a small set of nodes/edges (leverage points); claim not robust. Per useccases.md PRD II:
+positive dominance over rivals and nulls and low leverage sensitivity required.
+
+## 7. What would make this look good while still being wrong?
+• Leakage: labels or structure used in training that appear only in test (ensure strict split).
+• Confounding by graph density: wins only on dense subgraphs; nulls should match density where possible.
+• Label contamination: department/team labels correlated with degree; use degree-preserving rewires.
+• Responsibility-label artifacts: external Perf (NMI) rewards partition-label alignment that may not
+  reflect governance; internal Perf (-J) is structure-only.
+• Stronger models masquerading as better math: compare same model with vs without boundary module.
+• Gains from extra orchestration rather than the math: use sham-complexity control (useccases Arm C).

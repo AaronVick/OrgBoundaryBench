@@ -1,0 +1,8 @@
+# RCTI verification report (Relational Closure / Topology of Interiority)
+# Pipeline: directed_flag → persistence → C1/C4b/C2F
+# Method: cycle_rank_proxy
+
+C1: C1: satisfied (max β₁ lifespan=0.5000 > τ=0.1)
+C4b: C4b: no higher-dimensional features (β_k=0 for k≥2)
+Persistence entropy: 0.693147
+n_simplices: 14

@@ -1,0 +1,7 @@
+# Domain 6.4 (Enron SNAP) — Test D verification
+# n_used=60, n_lcc=33696, n_full=36692
+
+q* (greedy T3.4): |q*|=1 blocks, E_cl(q*)= 0.000000, Q(q*)= 0.000000
+
+Louvain [6]: |q|= 5 communities, E_cl(q)= 0.073968, Q(q)= 0.234385
+# Baseline comparison (no org-chart): both E_cl and Q reported; Test D full requires q_org.

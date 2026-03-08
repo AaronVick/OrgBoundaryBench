@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-03-08T13:51:47.830610+00:00",
+  "split": "test",
+  "runs": {
+    "simple_graph": {
+      "run_id": "20260308T135141Z_simple_graph",
+      "metrics": {
+        "accuracy": {
+          "value": 0.16666666666666666,
+          "ci_low": 0.0,
+          "ci_high": 0.4812499999999999,
+          "n": 12
+        },
+        "macro_f1": {
+          "value": 0.031746031746031744,
+          "ci_low": 0.0,
+          "ci_high": 0.09955882352941177,
+          "n": 12
+        },
+        "balanced_accuracy": {
+          "value": 0.1111111111111111,
+          "ci_low": 0.0,
+          "ci_high": 0.25,
+          "n": 12
+        }
+      }
+    },
+    "math_governed": {
+      "run_id": "20260308T135141Z_math_governed",
+      "metrics": {
+        "accuracy": {
+          "value": 0.3333333333333333,
+          "ci_low": 0.16666666666666666,
+          "ci_high": 0.6479166666666665,
+          "n": 12
+        },
+        "macro_f1": {
+          "value": 0.2222222222222222,
+          "ci_low": 0.07142857142857142,
+          "ci_high": 0.42128787878787877,
+          "n": 12
+        },
+        "balanced_accuracy": {
+          "value": 0.2777777777777778,
+          "ci_low": 0.14285714285714285,
+          "ci_high": 0.5,
+          "n": 12
+        }
+      }
+    },
+    "plain_llm_rag": {
+      "run_id": "20260308T135134Z_plain_llm_rag",
+      "metrics": {
+        "accuracy": {
+          "value": 0.3333333333333333,
+          "ci_low": 0.16666666666666666,
+          "ci_high": 0.6479166666666665,
+          "n": 12
+        },
+        "macro_f1": {
+          "value": 0.2222222222222222,
+          "ci_low": 0.07142857142857142,
+          "ci_high": 0.42128787878787877,
+          "n": 12
+        },
+        "balanced_accuracy": {
+          "value": 0.2777777777777778,
+          "ci_low": 0.14285714285714285,
+          "ci_high": 0.5,
+          "n": 12
+        }
+      }
+    },
+    "sham_complexity": {
+      "run_id": "20260308T135134Z_sham_complexity",
+      "metrics": {
+        "accuracy": {
+          "value": 0.25,
+          "ci_low": 0.08333333333333333,
+          "ci_high": 0.5,
+          "n": 12
+        },
+        "macro_f1": {
+          "value": 0.1452991452991453,
+          "ci_low": 0.02790750915750916,
+          "ci_high": 0.2604761904761905,
+          "n": 12
+        },
+        "balanced_accuracy": {
+          "value": 0.2222222222222222,
+          "ci_low": 0.12901785714285713,
+          "ci_high": 0.3333333333333333,
+          "n": 12
+        }
+      }
+    },
+    "plain_llm": {
+      "run_id": "20260308T135134Z_plain_llm",
+      "metrics": {
+        "accuracy": {
+          "value": 0.16666666666666666,
+          "ci_low": 0.0,
+          "ci_high": 0.4812499999999999,
+          "n": 12
+        },
+        "macro_f1": {
+          "value": 0.031746031746031744,
+          "ci_low": 0.0,
+          "ci_high": 0.09955882352941177,
+          "n": 12
+        },
+        "balanced_accuracy": {
+          "value": 0.1111111111111111,
+          "ci_low": 0.0,
+          "ci_high": 0.25,
+          "n": 12
+        }
+      }
+    }
+  }
+}

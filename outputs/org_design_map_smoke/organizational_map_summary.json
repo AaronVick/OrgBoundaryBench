@@ -1,0 +1,140 @@
+{
+  "best_baseline_E_lg": {
+    "E_lg": 0.0,
+    "name": "singleton",
+    "nmi": 0.8777918178074906
+  },
+  "claim_unlocked": false,
+  "dataset": {
+    "dataset_npz": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/data/processed/email_eu_core/kernel.npz",
+    "n": 40,
+    "n_labels": 20,
+    "n_original": 400
+  },
+  "decision": "FAIL",
+  "external_perm_p_values": {
+    "ari_p_value": 1.0,
+    "ari_star": 0.0,
+    "f1_p_value": 1.0,
+    "f1_star": 0.0,
+    "nmi_p_value": 1.0,
+    "nmi_star": 0.0
+  },
+  "null_rival": {
+    "ci_lower": -0.8777918178074906,
+    "ci_upper": -0.8777918178074906,
+    "mean_D": -0.8777918178074907,
+    "n_bootstrap": 20,
+    "std_D": 1.1102230246251565e-16
+  },
+  "q_star": {
+    "E_cl": 0.0,
+    "E_lg": 0.11111111111111113,
+    "E_rob_proxy": 0.0,
+    "ari": 0.0,
+    "block_balance": 0.0,
+    "contestability_proxy": 0.0,
+    "delta_gov_proxy": 0.33333333333333337,
+    "delta_otimes_proxy": null,
+    "macro_f1": 0.0,
+    "n_blocks": 1,
+    "name": "q_star",
+    "nmi": 0.0,
+    "responsibility_residue": 0.0
+  },
+  "required_outputs": [
+    "organizational_design_map_report.md",
+    "boundary_leaderboard.csv",
+    "external_agreement_report.md",
+    "stress_robustness_report.md",
+    "null_rival_audit_report.md",
+    "governance_preservation_report.md",
+    "temporal_drift_report.md",
+    "organizational_map_summary.json"
+  ],
+  "stress": {
+    "governance_stress_summary": {
+      "mean_E_cl_ratio_baseline_on_pert": 0.0,
+      "mean_nmi": 1.0,
+      "n_trials": 6,
+      "pass": true,
+      "stability_nmi_min": 0.5,
+      "stable_fraction": 1.0
+    },
+    "leverage": {
+      "S_max": 0.41668064479876754,
+      "details": [
+        {
+          "delta": 0.41668064479876754,
+          "epsilon": 0.05,
+          "trial": 0,
+          "type": "node_drop"
+        },
+        {
+          "delta": 0.18873235851750225,
+          "epsilon": 0.05,
+          "trial": 1,
+          "type": "node_drop"
+        },
+        {
+          "delta": 0.19498053003356408,
+          "epsilon": 0.1,
+          "trial": 0,
+          "type": "node_drop"
+        },
+        {
+          "delta": 0.20610250635448812,
+          "epsilon": 0.1,
+          "trial": 1,
+          "type": "node_drop"
+        },
+        {
+          "delta": 0.0,
+          "epsilon": 0.05,
+          "trial": 0,
+          "type": "edge_drop"
+        },
+        {
+          "delta": 0.0,
+          "epsilon": 0.05,
+          "trial": 1,
+          "type": "edge_drop"
+        },
+        {
+          "delta": 0.0,
+          "epsilon": 0.1,
+          "trial": 0,
+          "type": "edge_drop"
+        },
+        {
+          "delta": 0.0,
+          "epsilon": 0.1,
+          "trial": 1,
+          "type": "edge_drop"
+        },
+        {
+          "delta": 0.15265547679978564,
+          "epsilon": 0.05,
+          "type": "top_degree_drop"
+        },
+        {
+          "delta": 0.12422401837281227,
+          "epsilon": 0.1,
+          "type": "top_degree_drop"
+        }
+      ],
+      "n_perturbations": 10,
+      "perf_full": -0.5,
+      "stability_threshold": 1.0
+    }
+  },
+  "temporal_status": "not_run_missing_dataset",
+  "tests": {
+    "A_nontrivial_boundary": false,
+    "B_external_agreement": false,
+    "C_stress_robustness": true,
+    "D_null_rival_dominance": false,
+    "E_temporal_drift": false,
+    "F_governance_preservation": false
+  }
+}

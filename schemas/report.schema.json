@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reflective-samples-org/schemas/report.schema.json",
+  "title": "OpenClaw Benchmark Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "report_id",
+    "source_workspace",
+    "generated_at",
+    "scope",
+    "hypotheses",
+    "falsification",
+    "gates",
+    "headline",
+    "null_audit",
+    "leverage_audit",
+    "gate_pass",
+    "claim_status",
+    "negative_result_reporting",
+    "rows"
+  ],
+  "properties": {
+    "report_id": { "type": "string", "minLength": 1 },
+    "source_workspace": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string", "minLength": 1 },
+    "scope": { "type": "string", "minLength": 1 },
+    "hypotheses": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "falsification": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min_delta_vs_plain", "p_value_max", "leverage_drop_max"],
+      "properties": {
+        "min_delta_vs_plain": { "type": "number" },
+        "p_value_max": { "type": "number" },
+        "leverage_drop_max": { "type": "number" }
+      }
+    },
+    "headline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["metric", "math_governed", "baseline_metrics", "best_baseline", "delta_vs_best_baseline"],
+      "properties": {
+        "metric": { "type": "string" },
+        "math_governed": { "type": "number" },
+        "baseline_metrics": {
+          "type": "object",
+          "additionalProperties": { "type": "number" },
+          "required": ["plain_llm", "plain_llm_rag", "sham_complexity", "simple_graph"]
+        },
+        "best_baseline": { "type": "number" },
+        "delta_vs_best_baseline": { "type": "number" }
+      }
+    },
+    "null_audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["n_permutations", "p_value", "pass"],
+      "properties": {
+        "n_permutations": { "type": "integer", "minimum": 1 },
+        "p_value": { "type": "number" },
+        "pass": { "type": "boolean" }
+      }
+    },
+    "leverage_audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["degree_cutoff_90pct", "delta_full", "delta_without_top_degree", "delta_drop", "pass"],
+      "properties": {
+        "degree_cutoff_90pct": { "type": "number" },
+        "delta_full": { "type": "number" },
+        "delta_without_top_degree": { "type": "number" },
+        "delta_drop": { "type": "number" },
+        "pass": { "type": "boolean" }
+      }
+    },
+    "gate_pass": { "type": "boolean" },
+    "claim_status": {
+      "type": "string",
+      "enum": ["PROMOTE", "DO_NOT_PROMOTE"]
+    },
+    "negative_result_reporting": { "type": "boolean" },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["arm", "run_id", "metric", "value", "ci_low", "ci_high", "n"],
+        "properties": {
+          "arm": { "type": "string" },
+          "run_id": { "type": "string" },
+          "metric": { "type": "string" },
+          "value": { "type": "number" },
+          "ci_low": { "type": "number" },
+          "ci_high": { "type": "number" },
+          "n": { "type": "integer", "minimum": 1 }
+        }
+      }
+    }
+  }
+}

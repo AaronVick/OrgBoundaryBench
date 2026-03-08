@@ -1,0 +1,13 @@
+{
+  "run_id": "20260308T135141Z_simple_graph",
+  "arm": "simple_graph",
+  "model_provider": "local-simulated",
+  "model_name": "local_prompt_model_v1",
+  "model_version": "1.0",
+  "seed": 42,
+  "config_hash": "1c1f445644d03d62",
+  "prompt_hash": "1f39ef36071f94d2",
+  "rag_hash": "8309d07c9a000a88",
+  "dataset_version": "kernel.npz:n=80",
+  "evaluation_timestamp": "2026-03-08T13:51:41.994032+00:00"
+}

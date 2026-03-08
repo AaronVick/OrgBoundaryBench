@@ -1,0 +1,29 @@
+# PRD XVII: Aaron-vs-Plain Use-Case Suite
+# Generated: 2026-03-08T13:29:48.511123+00:00
+
+## 1. Hypothesis
+Structural proxy: boundary/closure framework (q*) should outperform one-block, singleton, Louvain, random.
+Results should be robust to leverage (outlier removal).
+
+## 2. Methods
+Ran boundary_benchmark, null_rival_audit, leverage_stability into one run dir;
+then build_public_findings for leaderboard, null_audit_summary, outlier_audit_summary, failure_gallery, model_registry.
+
+## 3. Public data used
+Synthetic: n=12, seed=42. For full PRD XVII use GH Archive, wiki-talk-temporal, email-Eu-core.
+
+## 4. Baseline (arms)
+Framework (q*), one-block, singleton, Louvain, random (null/rival); leverage = node/edge drop.
+
+## 5. Outcomes
+
+Run dir: /Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/runs/2026-03-08T_hard_audit/aaron_vs_plain_suite/aaron_vs_plain_suite_run
+Artifacts: boundary_benchmark_report.txt, null_rival_audit_report.txt, leverage_stability_report.txt.
+Public findings (in out_dir): findings_summary.md, benchmark_leaderboard.csv, null_audit_summary.md, outlier_audit_summary.md, model_registry.csv, failure_gallery.md, dataset_provenance.md.
+
+## 6. Falsification
+If q* does not beat baselines (D ≤ 0) or leverage sensitivity (S_max ≥ threshold), claim fails.
+
+## 7. What would make this look good while still being wrong?
+• Gains from extra orchestration rather than math; use sham-complexity control (Arm C).
+• LLM arms not included; this is structural proxy only.

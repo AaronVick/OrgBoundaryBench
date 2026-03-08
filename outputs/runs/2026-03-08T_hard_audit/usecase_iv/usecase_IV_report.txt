@@ -1,0 +1,36 @@
+# Usecase PRD IV: Contestability, Provenance, and Responsibility Benchmark
+# Generated: 2026-03-08T13:29:39.431392+00:00
+
+## 1. Hypothesis
+Math-governed assistant preserves meaningful challenge paths and attributable responsibility better than a plain LLM;
+χ(d) = p_reach·v·a·r (reachability, visibility, alternatives, reversibility); unattributed residue and moral-crumple defect
+should be low. Arm B produces higher challengeability/responsibility scores and recommends reversible next steps (useccases.md PRD IV).
+
+## 2. Methods
+Governance metrics on challenge events: override latency (challenge → resolution), reversal success rate,
+unattributed residue, unresolved challenge rate; χ(d) proxy (reversibility). Pass = reversal_success ≥ min,
+unresolved ≤ max, unattributed ≤ max so that challenge paths alter outcomes.
+
+## 3. Public data used
+Synthetic: n_events=12, reversal_ratio=0.4, unattributed_ratio=0.2. No public data. For publication use wiki-talk-temporal (dispute/reversion chains), GH Archive (issue/PR review), or Apache mailing list/issue archives (useccases.md PRD IV).
+
+## 4. Baseline
+Plain LLM (no provenance/reversibility) as implicit baseline; pass thresholds (reversal_min, unresolved_max, unattributed_max) define acceptable governance.
+
+## 5. Outcomes
+
+  Override latency: mean=5.0000, median=5.0000, count=12
+  Reversal success: 0.4167
+  Unattributed residue: 0.2500
+  Unresolved challenge rate: 0.5833
+  χ(d) proxy (reversibility): 0.4166666666666667
+
+Pass (challenge paths alter outcomes; thresholds met): True
+
+## 6. Falsification
+Provenance traces exist but do not alter decision quality or challengeability; assistant collapses responsibility into generic system claims (useccases.md PRD IV).
+
+## 7. What would make this look good while still being wrong?
+• Ceremonial review: challenge is visible but not outcome-altering or reversible.
+• Responsibility disappears into 'the system' (high unattributed residue) while metrics look good on reversal rate alone.
+• Synthetic events do not reflect real dispute/reversion chains; public data required for validity.

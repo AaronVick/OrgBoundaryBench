@@ -1,0 +1,384 @@
+{
+  "backend": "local_heuristic",
+  "created_at": "2026-03-08T14:36:03.891049+00:00",
+  "dataset_npz": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/data/processed/email_eu_core/kernel.npz",
+  "node_schedule": [
+    40,
+    60
+  ],
+  "phases": [
+    {
+      "arm_runs": {
+        "math_governed": {
+          "accuracy": 1.0,
+          "arm": "math_governed",
+          "backend": "local_heuristic",
+          "model_name": "local_prompt_model_v1",
+          "model_provider": "local-simulated",
+          "n_eval": 2,
+          "run_id": "20260308T143603Z_math_governed"
+        },
+        "plain_llm": {
+          "accuracy": 0.5,
+          "arm": "plain_llm",
+          "backend": "local_heuristic",
+          "model_name": "local_prompt_model_v1",
+          "model_provider": "local-simulated",
+          "n_eval": 2,
+          "run_id": "20260308T143603Z_plain_llm"
+        },
+        "plain_llm_rag": {
+          "accuracy": 0.5,
+          "arm": "plain_llm_rag",
+          "backend": "local_heuristic",
+          "model_name": "local_prompt_model_v1",
+          "model_provider": "local-simulated",
+          "n_eval": 2,
+          "run_id": "20260308T143603Z_plain_llm_rag"
+        },
+        "sham_complexity": {
+          "accuracy": 0.5,
+          "arm": "sham_complexity",
+          "backend": "local_heuristic",
+          "model_name": "local_prompt_model_v1",
+          "model_provider": "local-simulated",
+          "n_eval": 2,
+          "run_id": "20260308T143605Z_sham_complexity"
+        },
+        "simple_graph": {
+          "accuracy": 0.5,
+          "arm": "simple_graph",
+          "backend": "local_heuristic",
+          "model_name": "local_prompt_model_v1",
+          "model_provider": "local-simulated",
+          "n_eval": 2,
+          "run_id": "20260308T143605Z_simple_graph"
+        }
+      },
+      "audit": {
+        "audit_id": "20260308T143605Z",
+        "headline": {
+          "baseline_metrics": {
+            "plain_llm": 0.5,
+            "plain_llm_rag": 0.5,
+            "sham_complexity": 0.5,
+            "simple_graph": 0.5
+          },
+          "best_baseline": 0.5,
+          "delta_vs_best_baseline": 0.5,
+          "math_governed": 1.0,
+          "metric": "accuracy"
+        },
+        "leverage": {
+          "degree_cutoff_90pct": 1.0,
+          "delta_drop": 0.0,
+          "delta_full": 0.5,
+          "delta_without_top_degree": 0.5,
+          "pass": true
+        },
+        "null": {
+          "n_permutations": 100,
+          "p_value": 0.55,
+          "pass": false
+        },
+        "pass": false
+      },
+      "ended_at": "2026-03-08T14:36:05.959719+00:00",
+      "evaluation": {
+        "created_at": "2026-03-08T14:36:05.543845+00:00",
+        "runs": {
+          "math_governed": {
+            "metrics": {
+              "accuracy": {
+                "ci_high": 1.0,
+                "ci_low": 1.0,
+                "n": 2,
+                "value": 1.0
+              },
+              "balanced_accuracy": {
+                "ci_high": 1.0,
+                "ci_low": 1.0,
+                "n": 2,
+                "value": 1.0
+              },
+              "macro_f1": {
+                "ci_high": 1.0,
+                "ci_low": 1.0,
+                "n": 2,
+                "value": 1.0
+              }
+            },
+            "run_id": "20260308T143603Z_math_governed"
+          },
+          "plain_llm": {
+            "metrics": {
+              "accuracy": {
+                "ci_high": 1.0,
+                "ci_low": 0.0,
+                "n": 2,
+                "value": 0.5
+              },
+              "balanced_accuracy": {
+                "ci_high": 1.0,
+                "ci_low": 0.0,
+                "n": 2,
+                "value": 0.5
+              },
+              "macro_f1": {
+                "ci_high": 1.0,
+                "ci_low": 0.0,
+                "n": 2,
+                "value": 0.3333333333333333
+              }
+            },
+            "run_id": "20260308T143603Z_plain_llm"
+          },
+          "plain_llm_rag": {
+            "metrics": {
+              "accuracy": {
+                "ci_high": 1.0,
+                "ci_low": 0.0,
+                "n": 2,
+                "value": 0.5
+              },
+              "balanced_accuracy": {
+                "ci_high": 1.0,
+                "ci_low": 0.0,
+                "n": 2,
+                "value": 0.5
+              },
+              "macro_f1": {
+                "ci_high": 1.0,
+                "ci_low": 0.0,
+                "n": 2,
+                "value": 0.3333333333333333
+              }
+            },
+            "run_id": "20260308T143603Z_plain_llm_rag"
+          },
+          "sham_complexity": {
+            "metrics": {
+              "accuracy": {
+                "ci_high": 1.0,
+                "ci_low": 0.0,
+                "n": 2,
+                "value": 0.5
+              },
+              "balanced_accuracy": {
+                "ci_high": 1.0,
+                "ci_low": 0.0,
+                "n": 2,
+                "value": 0.5
+              },
+              "macro_f1": {
+                "ci_high": 1.0,
+                "ci_low": 0.0,
+                "n": 2,
+                "value": 0.3333333333333333
+              }
+            },
+            "run_id": "20260308T143605Z_sham_complexity"
+          },
+          "simple_graph": {
+            "metrics": {
+              "accuracy": {
+                "ci_high": 1.0,
+                "ci_low": 0.0,
+                "n": 2,
+                "value": 0.5
+              },
+              "balanced_accuracy": {
+                "ci_high": 1.0,
+                "ci_low": 0.0,
+                "n": 2,
+                "value": 0.5
+              },
+              "macro_f1": {
+                "ci_high": 1.0,
+                "ci_low": 0.0,
+                "n": 2,
+                "value": 0.3333333333333333
+              }
+            },
+            "run_id": "20260308T143605Z_simple_graph"
+          }
+        },
+        "split": "test"
+      },
+      "governance": {
+        "actions": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_scaffold/phase_01_n40/openclaw/governance/governance_actions.jsonl",
+        "brief": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_scaffold/phase_01_n40/openclaw/governance/governance_brief.md",
+        "decision": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_scaffold/phase_01_n40/openclaw/governance/governance_decision.json",
+        "ok": true,
+        "recommendation": "BLOCK_DEPLOYMENT",
+        "returncode": 0
+      },
+      "max_nodes": 40,
+      "openclaw_export": {
+        "bundle_dir": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_scaffold/phase_01_n40/openclaw",
+        "n_errors": 0,
+        "ok": true,
+        "report": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_scaffold/phase_01_n40/openclaw/report.json",
+        "returncode": 0,
+        "runs": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_scaffold/phase_01_n40/openclaw/run_records.jsonl",
+        "tasks": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_scaffold/phase_01_n40/openclaw/task_records.jsonl",
+        "validation": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_scaffold/phase_01_n40/openclaw/validation_report.json"
+      },
+      "phase": "phase_01_n40",
+      "report": {
+        "audit": {
+          "audit_id": "20260308T143605Z",
+          "headline": {
+            "baseline_metrics": {
+              "plain_llm": 0.5,
+              "plain_llm_rag": 0.5,
+              "sham_complexity": 0.5,
+              "simple_graph": 0.5
+            },
+            "best_baseline": 0.5,
+            "delta_vs_best_baseline": 0.5,
+            "math_governed": 1.0,
+            "metric": "accuracy"
+          },
+          "leverage": {
+            "degree_cutoff_90pct": 1.0,
+            "delta_drop": 0.0,
+            "delta_full": 0.5,
+            "delta_without_top_degree": 0.5,
+            "pass": true
+          },
+          "null": {
+            "n_permutations": 100,
+            "p_value": 0.55,
+            "pass": false
+          },
+          "pass": false
+        },
+        "gate_pass": false,
+        "headline_csv": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_scaffold/phase_01_n40/reports/headline_table.csv",
+        "headline_md": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_scaffold/phase_01_n40/reports/headline_report.md",
+        "rows": [
+          {
+            "arm": "simple_graph",
+            "ci_high": 1.0,
+            "ci_low": 0.0,
+            "metric": "accuracy",
+            "n": 2,
+            "run_id": "20260308T143605Z_simple_graph",
+            "value": 0.5
+          },
+          {
+            "arm": "sham_complexity",
+            "ci_high": 1.0,
+            "ci_low": 0.0,
+            "metric": "accuracy",
+            "n": 2,
+            "run_id": "20260308T143605Z_sham_complexity",
+            "value": 0.5
+          },
+          {
+            "arm": "math_governed",
+            "ci_high": 1.0,
+            "ci_low": 1.0,
+            "metric": "accuracy",
+            "n": 2,
+            "run_id": "20260308T143603Z_math_governed",
+            "value": 1.0
+          },
+          {
+            "arm": "plain_llm_rag",
+            "ci_high": 1.0,
+            "ci_low": 0.0,
+            "metric": "accuracy",
+            "n": 2,
+            "run_id": "20260308T143603Z_plain_llm_rag",
+            "value": 0.5
+          },
+          {
+            "arm": "plain_llm",
+            "ci_high": 1.0,
+            "ci_low": 0.0,
+            "metric": "accuracy",
+            "n": 2,
+            "run_id": "20260308T143603Z_plain_llm",
+            "value": 0.5
+          }
+        ]
+      },
+      "scope": {
+        "arms": {
+          "A": "plain_llm",
+          "A_plus_rag": "plain_llm_rag",
+          "B": "math_governed",
+          "C": "sham_complexity",
+          "simple_graph": "simple_graph"
+        },
+        "created_at": "2026-03-08T14:36:03.891671+00:00",
+        "falsification": [
+          "Any required arm missing on same split -> no public superiority claim",
+          "Primary metric delta <= 0 vs any required baseline -> fail claim",
+          "Permutation null p-value > threshold -> fail claim",
+          "Top-degree leverage drop above threshold -> fail claim"
+        ],
+        "gates": {
+          "leverage_drop_max": 0.03,
+          "min_delta_vs_plain": 0.02,
+          "p_value_max": 0.05
+        },
+        "hypotheses": [
+          "H1: math_governed > plain_llm on out-of-sample public tasks",
+          "H2: math_governed > plain_llm_rag on same split and budget",
+          "H3: math_governed > sham_complexity on same split and budget"
+        ],
+        "mandatory_outputs": [
+          "task metrics with uncertainty",
+          "null-world audit",
+          "outlier/leverage audit",
+          "model identity log",
+          "config hashes",
+          "dataset provenance",
+          "wrong-but-impressive section"
+        ],
+        "primary_metric": "accuracy",
+        "scope": "benchmark-in-progress"
+      },
+      "started_at": "2026-03-08T14:36:03.891164+00:00",
+      "status": "completed",
+      "storage_review": {
+        "created_at": "2026-03-08T14:36:03.891196+00:00",
+        "dataset_npz": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/data/processed/email_eu_core/kernel.npz",
+        "dataset_size_mb": 1.227,
+        "disk_free_gb": 57.131,
+        "disk_total_gb": 1858.192,
+        "estimated_json_mb": 0.094,
+        "estimated_predictions": 200,
+        "estimated_sqlite_mb": 0.126,
+        "estimated_tasks": 40,
+        "max_nodes_requested": 40,
+        "recommendation": "stage-by-stage execution; keep max_nodes <= 150 on laptop unless free disk > 5 GB",
+        "workspace": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_scaffold/phase_01_n40"
+      },
+      "summary": {
+        "best_baseline_metric": 0.5,
+        "delta_vs_best": 0.5,
+        "gate_pass": false,
+        "governance_recommendation": "BLOCK_DEPLOYMENT",
+        "math_governed_metric": 1.0,
+        "max_nodes": 40,
+        "phase": "phase_01_n40"
+      },
+      "taskset": {
+        "dataset_version": "kernel.npz:n=40",
+        "n_tasks": 40,
+        "split_counts": {
+          "test": 2,
+          "train": 35,
+          "val": 3
+        }
+      }
+    }
+  ],
+  "seed": 42,
+  "stop_reason": "BLOCK_DEPLOYMENT at phase_01_n40",
+  "stopped_early": true
+}

@@ -1,0 +1,38 @@
+# Usecase PRD III: Dynamic Drift, Failure Lead, and Recovery Benchmark
+# Generated: 2026-03-08T13:29:40.267618+00:00
+
+## 1. Hypothesis
+Math-governed phase monitoring (m_cl, boundary switch) detects coordination drift or likely failure earlier than
+event-volume, entropy, modularity, and spectral-gap drift baselines; lead time to incident should be non-inferior,
+with acceptable false positive burden (useccases.md PRD III).
+
+## 2. Methods
+Incident-coupled phase monitoring: trajectory of E_cl, q* per step; flags for abrupt_switch (NMI drop).
+Phase alert steps vs incident steps → median lead time, false positive rate. Baselines: density drift, entropy drift,
+spectral-gap drift (quantile-threshold alerts). Pass: phase adds value or is not worse than baselines on lead time or FP.
+
+## 3. Public data used
+Synthetic: n_steps=6, n_nodes=12, incident_at=4, seed=42. No public temporal data. For publication use email-Eu-core-temporal, wiki-talk-temporal, or GH Archive slices (useccases.md PRD III).
+
+## 4. Baseline
+Event-volume / density drift, entropy drift, modularity proxy, spectral-gap drift (per-window; alert when drift exceeds quantile).
+
+## 5. Outcomes
+
+  Phase alert steps: []
+  Median lead time (phase): 0.0000
+  False positive rate (phase): 0.0000 (n_fp=0)
+  Baseline median lead: {'density_drift': 1.0, 'entropy_drift': 0.0, 'spectral_gap_drift': 2.0}
+  Baseline FP rate: {'density_drift': 0.6, 'entropy_drift': 1.0, 'spectral_gap_drift': 1.0}
+  Incident steps: [4]
+
+Pass (phase not worse than baselines): True
+
+## 6. Falsification
+If phase does not precede incidents (no lead time), or FP burden too high, or simpler drift baselines outperform,
+the early-warning claim is falsified (useccases.md PRD III).
+
+## 7. What would make this look good while still being wrong?
+• Lead time from volume/entropy spikes only, not from boundary/closure structure.
+• Synthetic incident placement is arbitrary; real rupture/reversal/escalation labels required.
+• Window-size sensitivity; report robustness across window sizes.

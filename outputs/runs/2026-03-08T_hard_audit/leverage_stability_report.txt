@@ -1,0 +1,9 @@
+# PRD III: Outlier and Leverage Stability Test
+# n=12, epsilon=[0.05, 0.1], threshold=1.0
+
+Perf(q_full): -0.500000
+S_max: 0.235076
+n_perturbations: 10
+
+Pass (S_max < threshold): True
+Falsification: S above threshold implies results not stable under removals (thoughts3 PRD III).

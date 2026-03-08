@@ -1,0 +1,26 @@
+# RCTI Comparative Pipeline (PRD-21) — Empirical Test Family E
+# n=6, tau=0.1, use_gudhi=True
+
+## Construction: raw
+  C1: C1: satisfied (max β₁ lifespan=0.5000 > τ=0.1)
+  C4b: C4b: no higher-dimensional features (β_k=0 for k≥2)
+  Persistence entropy: 0.693147
+  n_simplices: 14
+  Baselines: clustering=0.0500, density=0.3056, entropy_degrees=1.7152, modularity=0.2203, reciprocity=0.3750, spectral_gap=0.7073
+
+## Construction: threshold_0.5
+  C1: C1: no β₁ bars (no persistent 1-cycles)
+  C4b: C4b: no higher-dimensional features (β_k=0 for k≥2)
+  Persistence entropy: 0.000000
+  n_simplices: 11
+  Baselines: clustering=0.0000, density=0.1667, entropy_degrees=1.7918, modularity=0.1667, reciprocity=0.0000, spectral_gap=0.5000
+
+## Construction: symmetrized
+  C1: C1: satisfied (max β₁ lifespan=0.5000 > τ=0.1)
+  C4b: C4b: no higher-dimensional features (β_k=0 for k≥2)
+  Persistence entropy: 1.098612
+  n_simplices: 16
+  Baselines: clustering=0.1000, density=0.4444, entropy_degrees=1.7573, modularity=0.2203, reciprocity=1.0000, spectral_gap=0.7073
+
+## Summary
+Topology (C1, C4b, PE) and graph baselines (density, clustering, reciprocity, modularity, spectral_gap, entropy_degrees) computed per construction. For discrimination vs condition labels, run with labeled data and compare AUC; this run reports values only.

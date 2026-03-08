@@ -1,0 +1,6 @@
+# Verification report (Domain 6.1)
+
+T3.2: N=200, violations=0, max_ratio=0.000000
+T3.3: N=50, max_decay_ratio=1.114299 (expect <= 1+delta=1.01)
+T3.4: N=30, steps in [min=4, max=8], all <= n-1: True
+E6.1: AUC(E_cl)=1.0000 [1.0000, 1.0000], AUC(Q)=1.0000 [1.0000, 1.0000], closure >= Q-0.05: True

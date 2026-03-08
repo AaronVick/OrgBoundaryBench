@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-03-08T14:52:05.622236+00:00",
+  "workspace": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_opus46_n80/phase_01_n80",
+  "dataset_npz": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/data/processed/email_eu_core/kernel.npz",
+  "dataset_size_mb": 1.227,
+  "disk_total_gb": 1858.192,
+  "disk_free_gb": 55.142,
+  "max_nodes_requested": 80,
+  "estimated_tasks": 80,
+  "estimated_predictions": 400,
+  "estimated_sqlite_mb": 0.252,
+  "estimated_json_mb": 0.188,
+  "recommendation": "stage-by-stage execution; keep max_nodes <= 150 on laptop unless free disk > 5 GB"
+}

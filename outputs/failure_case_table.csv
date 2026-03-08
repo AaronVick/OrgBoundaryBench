@@ -1,0 +1,33 @@
+task_id,task_family,gold_answer,best_baseline_arm,best_baseline_output,math_governed_output,baseline_correct,math_correct,outcome_type,failure_class,note
+task_00005,node_label_classification,36,sham_complexity,14,4,0,0,tied_wrong,null-sensitive,math changed output but did not improve
+task_00014,node_label_classification,22,sham_complexity,14,4,0,0,tied_wrong,null-sensitive,math changed output but did not improve
+task_00015,node_label_classification,16,sham_complexity,14,4,0,0,tied_wrong,null-sensitive,math changed output but did not improve
+task_00017,node_label_classification,4,sham_complexity,4,4,1,1,tied_correct,baseline already sufficient,math and baseline both correct
+task_00021,node_label_classification,21,sham_complexity,14,4,0,0,tied_wrong,null-sensitive,math changed output but did not improve
+task_00026,node_label_classification,15,sham_complexity,14,4,0,0,tied_wrong,null-sensitive,math changed output but did not improve
+task_00033,node_label_classification,0,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00050,node_label_classification,14,sham_complexity,14,14,1,1,tied_correct,baseline already sufficient,math and baseline both correct
+task_00051,node_label_classification,1,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00052,node_label_classification,19,sham_complexity,14,4,0,0,tied_wrong,null-sensitive,math changed output but did not improve
+task_00055,node_label_classification,7,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00056,node_label_classification,14,sham_complexity,14,14,1,1,tied_correct,baseline already sufficient,math and baseline both correct
+task_00057,node_label_classification,8,sham_complexity,14,4,0,0,tied_wrong,null-sensitive,math changed output but did not improve
+task_00058,node_label_classification,4,sham_complexity,4,4,1,1,tied_correct,baseline already sufficient,math and baseline both correct
+task_00060,node_label_classification,10,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00066,node_label_classification,21,sham_complexity,14,4,0,0,tied_wrong,null-sensitive,math changed output but did not improve
+task_00076,node_label_classification,7,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00080,node_label_classification,10,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00084,node_label_classification,3,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00107,node_label_classification,9,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00111,node_label_classification,10,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00117,node_label_classification,4,sham_complexity,4,4,1,1,tied_correct,baseline already sufficient,math and baseline both correct
+task_00126,node_label_classification,14,sham_complexity,14,14,1,1,tied_correct,baseline already sufficient,math and baseline both correct
+task_00142,node_label_classification,11,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00145,node_label_classification,15,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00148,node_label_classification,13,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00150,node_label_classification,4,sham_complexity,4,4,1,1,tied_correct,baseline already sufficient,math and baseline both correct
+task_00154,node_label_classification,11,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00156,node_label_classification,5,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline
+task_00167,node_label_classification,14,sham_complexity,14,14,1,1,tied_correct,baseline already sufficient,math and baseline both correct
+task_00176,node_label_classification,17,sham_complexity,14,4,0,0,tied_wrong,null-sensitive,math changed output but did not improve
+task_00185,node_label_classification,1,sham_complexity,4,4,0,0,tied_wrong,leverage-sensitive,math failed to beat baseline

@@ -1,0 +1,66 @@
+# Claim Registry snapshot for run 2026-03-07T235000Z (Domain 6.1 + 6.4 public data)
+# Source: docs/prds/claim_registry.yaml
+
+claims:
+  - id: T3.1
+    mvp: true
+    statement: "Closure equiv semigroup invariance (E_cl^op(q)=0 <=> P_t(L^2_q) subset L^2_q)"
+    status: proved
+    last_result: pass
+    last_run: "2026-03-07T20:24:46Z"
+  - id: T3.2
+    mvp: true
+    statement: "E_cl^op(q) <= m_*^2 * ||K||^2"
+    status: proved
+    last_result: pass
+    last_run: "2026-03-07T20:24:46Z"
+  - id: T3.3
+    mvp: true
+    statement: "Spectral decay rho(K^t|1^perp) = (1 - gap_abs)^t"
+    status: proved
+    last_result: pass
+    last_run: "2026-03-07T20:24:46Z"
+  - id: T3.4
+    mvp: true
+    statement: "Greedy coarse-graining terminates in at most n-1 steps"
+    status: proved
+    last_result: pass
+    last_run: "2026-03-07T20:24:46Z"
+  - id: E6.1
+    mvp: true
+    statement: "Estimators recover ground truth on synthetic benchmarks (6.1)"
+    status: open
+    baseline: "Graph modularity Q [5]"
+    last_result: pass
+    last_run: "2026-03-07T20:24:46Z"
+  - id: E6.2_qstar
+    mvp: false
+    statement: "q* recovers designer modules (6.2–6.3)"
+    status: open
+    baseline: "Louvain [6]"
+    last_result: null
+  - id: E6.2_m
+    mvp: false
+    statement: "Misalignment tracks decoupling (6.2)"
+    status: open
+    last_result: null
+  - id: E6.5
+    mvp: false
+    statement: "Closure energy tracks transitions (6.5)"
+    status: open
+    last_result: null
+  - id: E6.6
+    mvp: false
+    statement: "Neural state tracking (6.6) — hypothesis"
+    status: hypothesis
+    last_result: null
+  - id: C7.3
+    mvp: false
+    statement: "Conj 7.3 — B_ind intermediate density optimum"
+    status: open
+    last_result: null
+  - id: C10.1
+    mvp: false
+    statement: "Conj 10.1 — Lower bound m_* >= c * E_cl^op / (gap_abs * ||K||^2)"
+    status: open
+    last_result: null

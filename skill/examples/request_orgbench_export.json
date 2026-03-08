@@ -1,0 +1,7 @@
+{
+  "skill": "orgbench-openclaw-skill",
+  "action": "export_openclaw_bundle",
+  "workspace": "outputs/orgbench_real_local",
+  "out_dir": "outputs/orgbench_real_local/openclaw",
+  "strict": true
+}

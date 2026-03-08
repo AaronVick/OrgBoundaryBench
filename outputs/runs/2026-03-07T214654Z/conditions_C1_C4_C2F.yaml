@@ -1,0 +1,6 @@
+C1:
+  satisfied: True
+  message: "C1: satisfied (max β₁ lifespan=0.5000 > τ=0.1)"
+C4b:
+  satisfied: False
+  message: "C4b: no higher-dimensional features (β_k=0 for k≥2)"

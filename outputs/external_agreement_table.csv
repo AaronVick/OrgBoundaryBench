@@ -1,0 +1,7 @@
+method,n_blocks,block_balance,nmi,ari,macro_f1_best_match,n_samples,status,notes
+department_labels,30,0.904135,1.000000,1.000000,1.000000,1,reference,ground-truth label partition
+q_star,2,1.000000,0.313592,0.082967,0.021396,1,run,
+louvain,8,0.988723,0.724738,0.452152,0.184881,1,run,
+leiden,NA,NA,NA,NA,NA,0,not_available,dependency not available in workspace
+spectral,2,1.000000,0.313592,0.082967,0.021396,1,run,
+random_matched_block_mean,2,0.992252,0.082681,0.001376,0.013995,16,run,mean across random matched-block partitions

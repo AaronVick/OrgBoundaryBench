@@ -1,0 +1,4 @@
+{"action": "Do not deploy. Re-run staged arms and pass null+leverage gates with preregistered thresholds.", "action_id": "A001", "blocking": true, "decision_id": "20260308T142555Z_openclaw_gov", "owner_role": "research_lead"}
+{"action": "No governance deployment claim allowed until math_governed beats plain_llm_rag by configured minimum delta.", "action_id": "A002", "blocking": true, "decision_id": "20260308T142555Z_openclaw_gov", "owner_role": "research_lead"}
+{"action": "Increase task count per arm to policy minimum before deployment decision.", "action_id": "A003", "blocking": true, "decision_id": "20260308T142555Z_openclaw_gov", "owner_role": "benchmark_operator"}
+{"action": "Increase evaluation sample and bootstrap stability to narrow uncertainty intervals.", "action_id": "A004", "blocking": false, "decision_id": "20260308T142555Z_openclaw_gov", "owner_role": "benchmark_operator"}

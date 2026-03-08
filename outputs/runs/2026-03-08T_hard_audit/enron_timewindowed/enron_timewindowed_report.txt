@@ -1,0 +1,9 @@
+# Enron time-windowed pipeline (Deliverable 2, organizational_empirical_validation.md)
+# n_windows=4, max_nodes=20, seed=42
+# Event-linked analysis: DEFERRED (no timestamps in SNAP Enron edgelist)
+
+window	HC_t	density	mean_degree	n_edges	C2F_t_top_degree_10pct	C2F_t_random_10pct
+0	82	0.5263157894736842	10.0	100	0.012195121951219523	0.012195121951219523
+1	10	0.12105263157894737	2.3	23	0.09999999999999998	0.19999999999999996
+2	1	0.015789473684210527	0.3	3	1.0	1.0
+3	2	0.0	0.0	0	1.0	1.0

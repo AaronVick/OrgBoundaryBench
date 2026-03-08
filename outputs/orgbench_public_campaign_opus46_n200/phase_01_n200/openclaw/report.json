@@ -1,0 +1,96 @@
+{
+  "claim_status": "DO_NOT_PROMOTE",
+  "falsification": [
+    "Any required arm missing on same split -> no public superiority claim",
+    "Primary metric delta <= 0 vs any required baseline -> fail claim",
+    "Permutation null p-value > threshold -> fail claim",
+    "Top-degree leverage drop above threshold -> fail claim"
+  ],
+  "gate_pass": false,
+  "gates": {
+    "leverage_drop_max": 0.03,
+    "min_delta_vs_plain": 0.02,
+    "p_value_max": 0.05
+  },
+  "generated_at": "2026-03-08T14:59:44.355488+00:00",
+  "headline": {
+    "baseline_metrics": {
+      "plain_llm": 0.125,
+      "plain_llm_rag": 0.125,
+      "sham_complexity": 0.25,
+      "simple_graph": 0.125
+    },
+    "best_baseline": 0.25,
+    "delta_vs_best_baseline": 0.0,
+    "math_governed": 0.25,
+    "metric": "accuracy"
+  },
+  "hypotheses": [
+    "H1: math_governed > plain_llm on out-of-sample public tasks",
+    "H2: math_governed > plain_llm_rag on same split and budget",
+    "H3: math_governed > sham_complexity on same split and budget"
+  ],
+  "leverage_audit": {
+    "degree_cutoff_90pct": 1.0,
+    "delta_drop": 0.0,
+    "delta_full": 0.0,
+    "delta_without_top_degree": 0.0,
+    "pass": false
+  },
+  "negative_result_reporting": true,
+  "null_audit": {
+    "n_permutations": 500,
+    "p_value": 0.488,
+    "pass": false
+  },
+  "report_id": "20260308T145944Z",
+  "rows": [
+    {
+      "arm": "simple_graph",
+      "ci_high": 0.25,
+      "ci_low": 0.030468750000000017,
+      "metric": "accuracy",
+      "n": 32,
+      "run_id": "20260308T145845Z_simple_graph",
+      "value": 0.125
+    },
+    {
+      "arm": "sham_complexity",
+      "ci_high": 0.40625,
+      "ci_low": 0.12421875000000002,
+      "metric": "accuracy",
+      "n": 32,
+      "run_id": "20260308T145746Z_sham_complexity",
+      "value": 0.25
+    },
+    {
+      "arm": "math_governed",
+      "ci_high": 0.40625,
+      "ci_low": 0.12421875000000002,
+      "metric": "accuracy",
+      "n": 32,
+      "run_id": "20260308T145647Z_math_governed",
+      "value": 0.25
+    },
+    {
+      "arm": "plain_llm_rag",
+      "ci_high": 0.25,
+      "ci_low": 0.030468750000000017,
+      "metric": "accuracy",
+      "n": 32,
+      "run_id": "20260308T145551Z_plain_llm_rag",
+      "value": 0.125
+    },
+    {
+      "arm": "plain_llm",
+      "ci_high": 0.25,
+      "ci_low": 0.030468750000000017,
+      "metric": "accuracy",
+      "n": 32,
+      "run_id": "20260308T145452Z_plain_llm",
+      "value": 0.125
+    }
+  ],
+  "scope": "benchmark-in-progress",
+  "source_workspace": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/orgbench_public_campaign_opus46_n200/phase_01_n200"
+}

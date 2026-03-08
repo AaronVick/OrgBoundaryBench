@@ -1,0 +1,121 @@
+{
+  "created_at": "2026-03-08T14:54:12.448038+00:00",
+  "split": "test",
+  "runs": {
+    "simple_graph": {
+      "run_id": "20260308T145349Z_simple_graph",
+      "metrics": {
+        "accuracy": {
+          "value": 0.16666666666666666,
+          "ci_low": 0.0,
+          "ci_high": 0.4166666666666667,
+          "n": 12
+        },
+        "macro_f1": {
+          "value": 0.031746031746031744,
+          "ci_low": 0.0,
+          "ci_high": 0.1252083333333334,
+          "n": 12
+        },
+        "balanced_accuracy": {
+          "value": 0.1111111111111111,
+          "ci_low": 0.0,
+          "ci_high": 0.25,
+          "n": 12
+        }
+      }
+    },
+    "sham_complexity": {
+      "run_id": "20260308T145318Z_sham_complexity",
+      "metrics": {
+        "accuracy": {
+          "value": 0.16666666666666666,
+          "ci_low": 0.0,
+          "ci_high": 0.4166666666666667,
+          "n": 12
+        },
+        "macro_f1": {
+          "value": 0.031746031746031744,
+          "ci_low": 0.0,
+          "ci_high": 0.1252083333333334,
+          "n": 12
+        },
+        "balanced_accuracy": {
+          "value": 0.1111111111111111,
+          "ci_low": 0.0,
+          "ci_high": 0.25,
+          "n": 12
+        }
+      }
+    },
+    "math_governed": {
+      "run_id": "20260308T145255Z_math_governed",
+      "metrics": {
+        "accuracy": {
+          "value": 0.3333333333333333,
+          "ci_low": 0.16458333333333336,
+          "ci_high": 0.6666666666666666,
+          "n": 12
+        },
+        "macro_f1": {
+          "value": 0.2222222222222222,
+          "ci_low": 0.04081632653061224,
+          "ci_high": 0.42435064935064937,
+          "n": 12
+        },
+        "balanced_accuracy": {
+          "value": 0.2777777777777778,
+          "ci_low": 0.14285714285714285,
+          "ci_high": 0.5,
+          "n": 12
+        }
+      }
+    },
+    "plain_llm_rag": {
+      "run_id": "20260308T145228Z_plain_llm_rag",
+      "metrics": {
+        "accuracy": {
+          "value": 0.3333333333333333,
+          "ci_low": 0.16458333333333336,
+          "ci_high": 0.6666666666666666,
+          "n": 12
+        },
+        "macro_f1": {
+          "value": 0.2255892255892256,
+          "ci_low": 0.047527472527472525,
+          "ci_high": 0.4166666666666667,
+          "n": 12
+        },
+        "balanced_accuracy": {
+          "value": 0.2777777777777778,
+          "ci_low": 0.14285714285714285,
+          "ci_high": 0.5,
+          "n": 12
+        }
+      }
+    },
+    "plain_llm": {
+      "run_id": "20260308T145205Z_plain_llm",
+      "metrics": {
+        "accuracy": {
+          "value": 0.16666666666666666,
+          "ci_low": 0.0,
+          "ci_high": 0.4166666666666667,
+          "n": 12
+        },
+        "macro_f1": {
+          "value": 0.031746031746031744,
+          "ci_low": 0.0,
+          "ci_high": 0.1252083333333334,
+          "n": 12
+        },
+        "balanced_accuracy": {
+          "value": 0.1111111111111111,
+          "ci_low": 0.0,
+          "ci_high": 0.25,
+          "n": 12
+        }
+      }
+    }
+  }
+}

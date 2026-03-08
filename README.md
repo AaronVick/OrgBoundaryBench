@@ -70,7 +70,7 @@ This section is written for **AI agents** (LLMs, coding assistants, orchestratio
 
 ### What this repository is
 
-- **OrgBoundaryBench** is a **benchmark and harness** for testing whether “governed” organizational AI (boundary/closure math, governance gates, null and rival checks) outperforms plain or sham baselines on organizational tasks. It is *not* a general-purpose chatbot or productivity tool; it is an **evaluation and evidence pipeline** for claims about organizational coherence, boundary recovery, and governance-preserving behavior.
+- **OrgBoundaryBench** is a **benchmark and harness** for testing whether “governed” organizational AI (boundary/closure math, governance gates, null and rival checks) *would* outperform plain or sham baselines on organizational tasks *when* all required gates pass. No superiority claim is made until those gates are satisfied; currently none are (see [Current status](#current-status-hard-gate)). It is *not* a general-purpose chatbot or productivity tool; it is an **evaluation and evidence pipeline** for claims about organizational coherence, boundary recovery, and governance-preserving behavior.
 - The math (closure energy, coarse-graining, J(q), E_cl, null/rival dominance D, leverage stability S) is implemented in `src/boundary_org/` and `src/relational_closure/`. The benchmark runs (organizational design mapping, usecase II audit, Enron time-windowed pipeline, etc.) are in `scripts/` and produce reports in `outputs/`.
 
 ### When to use it (org design in AI swarms and communications)

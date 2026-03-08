@@ -8,8 +8,8 @@
 node_modules/
 
 # Documentation and PRDs (local/canonical copies; may be maintained outside repo)
+# Entire docs tree ignored (paper/, findings/, prds/, etc.)
 docs/
-docs/prds/
 
 # Downloaded public data (pipeline output; obtain via PRD-01 or README links)
 data/

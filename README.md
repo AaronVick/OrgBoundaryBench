@@ -6,8 +6,22 @@ Public benchmark harness for evaluating whether governed organizational AI behav
 
 ---
 
+## Benchmark & invitation (not a verdict)
+
+This framework is released as an **open benchmark**, not a final verdict. It provides:
+
+- **Open benchmark** — Public protocol, test families, and evaluation criteria.
+- **Reproducible code** — Deterministic scripts, documented seeds, and public datasets (SNAP, Zenodo).
+- **Documented failures** — Current gate outcomes and failure interpretations are reported in [Current status](#current-status-hard-gate) and [outputs/FINDINGS.md](outputs/FINDINGS.md).
+- **Explicit unresolved gates** — Which gates pass or fail is stated clearly; no superiority claim is made until all required gates pass.
+
+**We invite replication, criticism, and extension.** Independent runs, alternative baselines, improved methodology, and extensions to new domains are welcome. The benchmark is designed to be falsifiable and to advance the evidence base for organizational AI governance.
+
+---
+
 ## Table of contents
 
+- [Benchmark & invitation](#benchmark--invitation-not-a-verdict) — Open benchmark, reproducible code, documented failures, explicit gates; we invite replication, criticism, and extension
 - [Groundwork & citation](#groundwork--citation) — Zenodo DOIs, slide decks, and academic references
 - [For AI agents (agentic instructions)](#for-ai-agents-agentic-instructions) — How to use this repo for org design, swarms, enterprise, and OpenClaw
 - [Current status](#current-status-hard-gate)
@@ -109,7 +123,7 @@ For full OpenClaw installation, channels, and deployment, see the [official Open
 
 ## Current status (hard-gate)
 
-Latest public mapping run status:
+Latest public mapping run status (documented for reproducibility and critique):
 
 - nontrivial boundary map: `PASS`
 - governance preservation: `PASS`
@@ -119,7 +133,7 @@ Latest public mapping run status:
 - temporal drift validation: `PASS` (completed)
 - organizational-design claim: `LOCKED`
 
-The benchmark is in progress. No superiority or organizational-design claim is currently unlocked.
+These are **explicit unresolved gates**: the benchmark is in progress, and no superiority or organizational-design claim is currently unlocked. See [outputs/org_design_mapping_failure_interpretation.md](outputs/org_design_mapping_failure_interpretation.md) and [outputs/FINDINGS.md](outputs/FINDINGS.md) for documented failures and interpretation. Replication and independent verification are invited.
 
 ## Experimental protocol (academic format)
 

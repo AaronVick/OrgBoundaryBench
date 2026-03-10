@@ -1,0 +1,37 @@
+{
+  "run_id": "006",
+  "script": "v3test_v006.py",
+  "exp1": {
+    "N1_random": 1600,
+    "N1_greedy": 500,
+    "n": 10,
+    "n_greedy": 12,
+    "retained": 1600,
+    "drop_reasons": {
+      "DM": 0,
+      "K2": 0,
+      "gap": 0,
+      "E": 500,
+      "ok_random": 1600,
+      "ok_greedy": 0
+    }
+  },
+  "exp2": {
+    "N2": 500,
+    "perturb_str": 0.35,
+    "max_steps": 50,
+    "collapse_thresh_010": 0.1,
+    "collapse_thresh_020": 0.2,
+    "collapse_rate_010": 0.046,
+    "hazard_ratio_Q5_vs_Q1": 230001.00000000003
+  },
+  "exp3": {
+    "N3": 500,
+    "n3": 8,
+    "nag3": 6,
+    "n_strategies": 11,
+    "skel_5step_mean_dE": -0.005681118936127337
+  },
+  "output_dir": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/docs/exploratory_simulations/run006",
+  "total_elapsed_sec": 224.4
+}

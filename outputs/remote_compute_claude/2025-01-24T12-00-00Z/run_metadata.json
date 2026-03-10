@@ -1,0 +1,8 @@
+{
+  "run_id": "2025-01-24T12:00:00Z",
+  "model_id": "claude-opus-4-6",
+  "payload_hash": "6b188b82870cb3bc974a0221efd5a3024b0d536a0f522f8394b17a90ec31102e",
+  "payload_path": "/Users/aaronvick/Downloads/aboutmoxie/Reflective_Samples_Org/outputs/remote_compute_payloads/payload.json",
+  "elapsed_seconds": 16.41,
+  "confirmation": "REMOTE_COMPUTE_v1"
+}

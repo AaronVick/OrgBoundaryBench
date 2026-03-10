@@ -1,0 +1,15 @@
+# PRD-31: Full null/rival/leverage audit
+Generated: 2026-03-08T23:33:37.942709+00:00
+
+## Rewire-null gate (bootstrap CI for D)
+  mean_D: -0.006156
+  CI_lower: -0.008184, CI_upper: -0.004706
+  n_bootstrap: 12 (includes row-sum-preserving rewire nulls)
+  Pass (CI_lower > 0): False
+
+## Leverage gate
+  S_max: nan
+  threshold: 1.0
+  Pass (S_max < threshold): False
+
+Overall pass (rewire-null and leverage): False

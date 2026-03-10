@@ -22,7 +22,9 @@ This framework is released as an **open benchmark**, not a final verdict. It pro
 ## Table of contents
 
 - [Benchmark & invitation](#benchmark--invitation-not-a-verdict) — Open benchmark, reproducible code, documented failures, explicit gates; we invite replication, criticism, and extension
-- [Groundwork & citation](#groundwork--citation) — Zenodo DOIs, slide decks, and academic references
+- [Groundwork & citation](#groundwork--citation) — Zenodo DOIs, public slide decks, and academic references
+- [Public docs & slide decks](#public-docs--slide-decks) — All materials in [public/](public/) with Zenodo DOIs
+- [Exploratory simulations](#exploratory-simulations) — Boundary-coherence simulation runs ([docs/](docs/exploratory_simulations), [tests/](tests/exploratory_simulations))
 - [For AI agents (agentic instructions)](#for-ai-agents-agentic-instructions) — How to use this repo for org design, swarms, enterprise, and OpenClaw
 - [Current status](#current-status-hard-gate)
 - [Experimental protocol](#experimental-protocol-academic-format)
@@ -36,12 +38,13 @@ This framework is released as an **open benchmark**, not a final verdict. It pro
 
 ## Groundwork & citation
 
-The following works form the conceptual and academic groundwork for this benchmark. They are preserved on Zenodo with DOIs for citation; slide decks and preprints are linked from this repo and from Zenodo.
+The following works form the conceptual and academic groundwork for this benchmark. They are preserved on Zenodo with DOIs for citation; slide decks and preprints are in [public/](public/) and linked from Zenodo.
 
 ### Trust After Machines
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18682993.svg)](https://doi.org/10.5281/zenodo.18682993)
 
+- **DOI:** [10.5281/zenodo.18682993](https://doi.org/10.5281/zenodo.18682993)
 - **Zenodo:** [zenodo.org/records/18682993](https://zenodo.org/records/18682993)
 - **Cite:** Aaron Vick. *Trust After Machines.* Zenodo, 2025. doi:[10.5281/zenodo.18682993](https://doi.org/10.5281/zenodo.18682993).
 
@@ -49,6 +52,7 @@ The following works form the conceptual and academic groundwork for this benchma
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18663463.svg)](https://doi.org/10.5281/zenodo.18663463)
 
+- **DOI:** [10.5281/zenodo.18663463](https://doi.org/10.5281/zenodo.18663463)
 - **Zenodo:** [zenodo.org/records/18663463](https://zenodo.org/records/18663463)
 - **Cite:** Aaron Vick. *Long Arc of Trust.* Zenodo, 2025. doi:[10.5281/zenodo.18663463](https://doi.org/10.5281/zenodo.18663463).
 
@@ -56,25 +60,47 @@ The following works form the conceptual and academic groundwork for this benchma
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18624567.svg)](https://doi.org/10.5281/zenodo.18624567)
 
+- **DOI:** [10.5281/zenodo.18624567](https://doi.org/10.5281/zenodo.18624567)
 - **Zenodo:** [zenodo.org/records/18624567](https://zenodo.org/records/18624567)
-- **In-repo:** [public/The_Agentic_Shift.pdf](public/The_Agentic_Shift.pdf)
+- **In-repo (slide deck):** [public/The_Agentic_Shift.pdf](public/The_Agentic_Shift.pdf)
 - **Cite:** Aaron Vick. *The Agentic Shift.* Zenodo, 2025. doi:[10.5281/zenodo.18624567](https://doi.org/10.5281/zenodo.18624567).
 
 ### The 5 Pillars of Grace (April 2025)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18838932.svg)](https://doi.org/10.5281/zenodo.18838932)
 
+- **DOI:** [10.5281/zenodo.18838932](https://doi.org/10.5281/zenodo.18838932)
 - **Zenodo:** [zenodo.org/records/18838932](https://zenodo.org/records/18838932)
-- **In-repo:** [public/The_5_Pillars_of_Grace__A_Formal_Architecture_for_Recursive_Reflective_Coherence.pdf](public/The_5_Pillars_of_Grace__A_Formal_Architecture_for_Recursive_Reflective_Coherence.pdf)
+- **In-repo (slide deck):** [public/The_5_Pillars_of_Grace__A_Formal_Architecture_for_Recursive_Reflective_Coherence.pdf](public/The_5_Pillars_of_Grace__A_Formal_Architecture_for_Recursive_Reflective_Coherence.pdf)
 - **Cite:** Aaron Vick. *The 5 Pillars of Grace: A Formal Architecture for Recursive Reflective Coherence.* Zenodo, April 2025. doi:[10.5281/zenodo.18838932](https://doi.org/10.5281/zenodo.18838932).
 
-### Additional material in this repo
+### Public docs & slide decks
 
-- [public/Architecting_AI_Interiority.pdf](public/Architecting_AI_Interiority.pdf) — Architecting AI interiority
-- [public/Leading at the Threshold.pdf](public/Leading%20at%20the%20Threshold.pdf) — Leading at the threshold
-- [public/AaronVick.pdf](public/AaronVick.pdf) — Author / contact
+All public materials are in [public/](public/). Slide decks for the Zenodo works are available in-repo and on Zenodo (Preview/Download).
 
-*To view slide decks with a consistent viewer, open the Zenodo record links above and use the “Preview” or “Download” options on each record.*
+| Document | In-repo | DOI / notes |
+|----------|---------|-------------|
+| **Trust After Machines** | — | [10.5281/zenodo.18682993](https://doi.org/10.5281/zenodo.18682993) (Zenodo only) |
+| **Long Arc of Trust** | — | [10.5281/zenodo.18663463](https://doi.org/10.5281/zenodo.18663463) (Zenodo only) |
+| **The Agentic Shift** | [The_Agentic_Shift.pdf](public/The_Agentic_Shift.pdf) | [10.5281/zenodo.18624567](https://doi.org/10.5281/zenodo.18624567) |
+| **The 5 Pillars of Grace** | [The_5_Pillars_of_Grace__A_Formal_Architecture_for_Recursive_Reflective_Coherence.pdf](public/The_5_Pillars_of_Grace__A_Formal_Architecture_for_Recursive_Reflective_Coherence.pdf) | [10.5281/zenodo.18838932](https://doi.org/10.5281/zenodo.18838932) |
+| **Architecting AI Interiority** | [Architecting_AI_Interiority.pdf](public/Architecting_AI_Interiority.pdf) | — |
+| **Leading at the Threshold** | [Leading at the Threshold.pdf](public/Leading%20at%20the%20Threshold.pdf) | — |
+| **Author / contact** | [AaronVick.pdf](public/AaronVick.pdf) | — |
+
+
+*To view slide decks, open the Zenodo record links above or the PDFs in [public/](public/) (Zenodo Preview/Download or a local PDF viewer).*
+
+---
+
+## Exploratory simulations
+
+Exploratory boundary-coherence simulations (synthetic Dirichlet-kernel runs for bound scaling, collapse hazard, and coordination-skeleton strategies) are maintained in two places:
+
+- **[docs/exploratory_simulations/](docs/exploratory_simulations/)** — Scripts, run outputs (run001–run010), findings, and [CHANGELOG](docs/exploratory_simulations/CHANGELOG.md).
+- **[tests/exploratory_simulations/](tests/exploratory_simulations/)** — Mirror/copy for test and reproducibility tooling; same structure and findings.
+
+These runs are *exploratory computational scaffolding* (see methodology and dissertation Ch13), not external validation of the benchmark. Run-by-run changelog, artifact paths, and narrative–result divergence are documented in the findings and CHANGELOG.
 
 ---
 
@@ -174,6 +200,12 @@ Diagnostic and summary:
 - [outputs/org_design_mapping_failure_interpretation.md](outputs/org_design_mapping_failure_interpretation.md)
 - [outputs/FINDINGS.md](outputs/FINDINGS.md)
 
+Remote-compute runs (Claude API), when used:
+
+- `outputs/remote_compute_claude/<run_id>/` — payload, result, run_metadata, optional verification_report (see [docs/REMOTE_COMPUTE_PROTOCOL.md](docs/REMOTE_COMPUTE_PROTOCOL.md)).
+
+**Evidentiary testing (two decisive runs):** To run the tests that would move the scientific needle — full email-Eu-core null/rival/leverage audit and event-linked criterion — see [docs/evidentiary_roadmap.md](docs/evidentiary_roadmap.md). One-command full audit (build kernel if needed, then run PRD-31): `python3 scripts/run_evidentiary_full_audit.py` (optional `--feasible` for n=400).
+
 ## Public datasets used
 
 Static organizational graph:
@@ -229,6 +261,20 @@ python scripts/run_org_design_diagnostics.py \
   --out-dir outputs \
   --max-nodes 120
 ```
+
+## Remote compute (Claude API)
+
+When local runs are infeasible (e.g. laptop memory or runtime limits), the same logical procedures (bootstrap null dominance, permutation external p-values) can be run **remotely** by sending a small payload and explicit math instructions to **Claude Opus 4.6** via the Anthropic API. Results are documented with model ID, payload hash, and optional local verification.
+
+- **Protocol:** [docs/REMOTE_COMPUTE_PROTOCOL.md](docs/REMOTE_COMPUTE_PROTOCOL.md)
+- **Model:** `claude-opus-4-6` (documented in run artifacts and protocol).
+- **Scripts:**  
+  - `scripts/prepare_remote_compute_payload.py` — build payload JSON from a small kernel.  
+  - `scripts/run_remote_compute_claude.py` — send payload to Claude, write result to `outputs/remote_compute_claude/<run_id>/`.  
+  - `scripts/verify_remote_compute.py` — verify a remote result by re-running the same payload locally.
+- **Outputs:** Each run produces `payload.json`, `result.json`, `run_metadata.json`, and optionally `verification_report.json` after verification. These can be published for reproducibility; the protocol describes verification and caveats (context limits, numeric precision).
+
+Requires `ANTHROPIC_API_KEY`. No API key is stored in the repository.
 
 ## Model backends and governance
 

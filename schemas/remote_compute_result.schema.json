@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reflective-samples-org/schemas/remote_compute_result.schema.json",
+  "title": "Remote compute result",
+  "description": "Structured result from Claude API remote compute run.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "model_id", "confirmation"],
+  "properties": {
+    "run_id": { "type": "string", "minLength": 1 },
+    "model_id": { "type": "string", "minLength": 1 },
+    "payload_hash": { "type": "string", "minLength": 1 },
+    "confirmation": { "type": "string", "minLength": 1 },
+    "bootstrap": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mean_D": { "type": "number" },
+        "std_D": { "type": "number" },
+        "ci_lower": { "type": "number" },
+        "ci_upper": { "type": "number" },
+        "n_bootstrap": { "type": "integer" },
+        "best_rival_name_full": { "type": ["string", "null"] },
+        "best_rival_nmi_full": { "type": "number" },
+        "star_nmi_full": { "type": "number" },
+        "pass": { "type": "boolean" }
+      }
+    },
+    "permutation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "nmi_star": { "type": "number" },
+        "ari_star": { "type": "number" },
+        "f1_star": { "type": "number" },
+        "nmi_p_value": { "type": "number" },
+        "ari_p_value": { "type": "number" },
+        "f1_p_value": { "type": "number" }
+      }
+    },
+    "spot_check": {
+      "type": "object",
+      "description": "Optional: one sample for verification.",
+      "additionalProperties": true
+    }
+  }
+}

@@ -1,0 +1,6 @@
+strategy_a,strategy_b,p_a_wins,p_b_wins
+dE_skeleton_3,dE_centrality_3,0.442,0.556
+dE_skeleton_3,dE_random_3,0.518,0.482
+dE_skeleton_4,dE_centrality_3,0.408,0.592
+dE_skeleton_4,dE_random_3,0.464,0.536
+dE_skeleton_4,dE_skeleton_3,0.362,0.638

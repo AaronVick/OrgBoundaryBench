@@ -1,0 +1,8 @@
+{
+  "linear_collapse_step_E0": {
+    "slope": -109.824298249698,
+    "r": -0.7673089725140732,
+    "p": 3.771119501480641e-98
+  },
+  "odds_ratio_highE0_vs_lowE0_collapse": 57500000000000.0
+}

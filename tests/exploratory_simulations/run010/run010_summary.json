@@ -1,0 +1,8 @@
+{
+  "run_id": "010",
+  "script": "vtest_v010.py",
+  "c_star_floor_extreme_low": 0.07556045112526248,
+  "psi_reduction_pct_mean": -0.5687536384173038,
+  "n_retained": 9000,
+  "n_trials_total": 9000
+}

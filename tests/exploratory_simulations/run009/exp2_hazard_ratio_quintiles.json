@@ -1,0 +1,24 @@
+{
+  "threshold_020": {
+    "collapse_rate_overall": 0.014
+  },
+  "threshold_010": {
+    "collapse_rate_overall": 0.058
+  },
+  "threshold_005": {
+    "collapse_rate_overall": 0.386
+  },
+  "hazard_ratio_Q5_vs_Q1_010": 26.997400259974004,
+  "ramping": {
+    "collapse_rate_010_ramp": 0.086,
+    "mean_collapse_step_ramp": 45.954,
+    "r_E0_collapse_step_ramp": -0.8274969315133388
+  },
+  "median_survival_step_by_quintile": {
+    "Q1": 50.0,
+    "Q2": 50.0,
+    "Q3": 50.0,
+    "Q4": 50.0,
+    "Q5": 50.0
+  }
+}

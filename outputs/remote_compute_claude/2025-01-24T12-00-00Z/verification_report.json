@@ -1,0 +1,100 @@
+{
+  "run_id": "2025-01-24T12:00:00Z",
+  "payload_hash": "6b188b82870cb3bc974a0221efd5a3024b0d536a0f522f8394b17a90ec31102e",
+  "tolerance": 0.01,
+  "bootstrap_diffs": {
+    "mean_D": {
+      "remote": 0.0,
+      "local": -0.5548767067670795,
+      "diff": 0.5548767067670795
+    },
+    "std_D": {
+      "remote": 0.0389,
+      "local": 0.07669917279996949,
+      "diff": 0.03779917279996949
+    },
+    "ci_lower": {
+      "remote": -0.0596,
+      "local": -0.6927606434516645,
+      "diff": 0.6331606434516646
+    },
+    "ci_upper": {
+      "remote": 0.0596,
+      "local": -0.3852813576227668,
+      "diff": 0.44488135762276676
+    },
+    "best_rival_nmi_full": {
+      "remote": 0.0602,
+      "local": 0.6013384354938498,
+      "diff": 0.5411384354938498
+    }
+  },
+  "bootstrap_local": {
+    "mean_D": -0.5548767067670795,
+    "std_D": 0.07669917279996949,
+    "ci_lower": -0.6927606434516645,
+    "ci_upper": -0.3852813576227668,
+    "n_bootstrap": 30,
+    "best_rival_name_full": "singleton",
+    "best_rival_nmi_full": 0.6013384354938498,
+    "star_nmi_full": 0.056817565479042646,
+    "pass": false
+  },
+  "bootstrap_remote": {
+    "mean_D": 0.0,
+    "std_D": 0.0389,
+    "ci_lower": -0.0596,
+    "ci_upper": 0.0596,
+    "n_bootstrap": 30,
+    "best_rival_name_full": "spectral",
+    "best_rival_nmi_full": 0.0602,
+    "star_nmi_full": 0.0602,
+    "pass": false
+  },
+  "bootstrap_verified": false,
+  "permutation_diffs": {
+    "ari_star": {
+      "remote": -0.0435,
+      "local": -0.016779606324620847,
+      "diff": 0.02672039367537915
+    },
+    "f1_star": {
+      "remote": 0.2202,
+      "local": 0.18823529411764706,
+      "diff": 0.03196470588235295
+    },
+    "nmi_p_value": {
+      "remote": 0.7667,
+      "local": 0.6,
+      "diff": 0.16670000000000007
+    },
+    "ari_p_value": {
+      "remote": 0.7333,
+      "local": 0.6666666666666666,
+      "diff": 0.06663333333333332
+    },
+    "f1_p_value": {
+      "remote": 0.7,
+      "local": 0.4666666666666667,
+      "diff": 0.23333333333333328
+    }
+  },
+  "permutation_local": {
+    "nmi_star": 0.056817565479042646,
+    "ari_star": -0.016779606324620847,
+    "f1_star": 0.18823529411764706,
+    "nmi_p_value": 0.6,
+    "ari_p_value": 0.6666666666666666,
+    "f1_p_value": 0.4666666666666667
+  },
+  "permutation_remote": {
+    "nmi_star": 0.0602,
+    "ari_star": -0.0435,
+    "f1_star": 0.2202,
+    "nmi_p_value": 0.7667,
+    "ari_p_value": 0.7333,
+    "f1_p_value": 0.7
+  },
+  "permutation_verified": false,
+  "overall_verified": false
+}

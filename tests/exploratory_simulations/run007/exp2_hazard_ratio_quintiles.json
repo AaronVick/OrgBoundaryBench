@@ -1,0 +1,12 @@
+{
+  "threshold_020": {
+    "collapse_rate_overall": 0.01
+  },
+  "threshold_010": {
+    "collapse_rate_overall": 0.062
+  },
+  "threshold_005": {
+    "collapse_rate_overall": 0.424
+  },
+  "hazard_ratio_Q5_vs_Q1_010": 310001.0
+}

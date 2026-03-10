@@ -1,0 +1,28 @@
+{
+  "run_id": "2025-01-24T12:00:00Z",
+  "model_id": "claude-opus-4-6",
+  "confirmation": "REMOTE_COMPUTE_v1",
+  "bootstrap": {
+    "mean_D": 0.0,
+    "std_D": 0.0389,
+    "ci_lower": -0.0596,
+    "ci_upper": 0.0596,
+    "n_bootstrap": 30,
+    "best_rival_name_full": "spectral",
+    "best_rival_nmi_full": 0.0602,
+    "star_nmi_full": 0.0602,
+    "pass": false
+  },
+  "permutation": {
+    "nmi_star": 0.0602,
+    "ari_star": -0.0435,
+    "f1_star": 0.2202,
+    "nmi_p_value": 0.7667,
+    "ari_p_value": 0.7333,
+    "f1_p_value": 0.7
+  },
+  "spot_check": {
+    "note": "spectral is identical to q_star so D=0 for all bootstrap samples; louvain NMI~0.0253; one_block NMI=0; singleton NMI uses arithmetic mean normalization"
+  },
+  "payload_hash": "6b188b82870cb3bc974a0221efd5a3024b0d536a0f522f8394b17a90ec31102e"
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reflective-samples-org/schemas/remote_compute_payload.schema.json",
+  "title": "Remote compute payload",
+  "description": "Input payload for Claude API remote compute (bootstrap null dominance, permutation external p-values).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["payload_version", "task", "n", "labels", "q_star", "seed"],
+  "properties": {
+    "payload_version": { "type": "string", "minLength": 1 },
+    "task": {
+      "type": "string",
+      "enum": ["bootstrap_null_dominance", "permutation_external_pvals", "combined"]
+    },
+    "n": { "type": "integer", "minimum": 1 },
+    "labels": {
+      "type": "array",
+      "items": { "type": "integer" },
+      "minItems": 1
+    },
+    "q_star": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": { "type": "integer" }
+      },
+      "minItems": 1
+    },
+    "rival_partitions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "array",
+          "items": { "type": "integer" }
+        }
+      },
+      "description": "Required for bootstrap_null_dominance and combined."
+    },
+    "n_bootstrap": { "type": "integer", "minimum": 1 },
+    "n_perm": { "type": "integer", "minimum": 1 },
+    "seed": { "type": "integer" }
+  },
+  "description_conditional": "For task bootstrap_null_dominance or combined: rival_partitions and n_bootstrap required. For permutation_external_pvals or combined: n_perm required."
+}

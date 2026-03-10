@@ -7,6 +7,7 @@ entry points must produce the documented outputs. Methodology: outputs/METHODOLO
 
 from __future__ import annotations
 
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -253,11 +254,13 @@ def test_run_email_eu_core_usecase_ii_script(tmp_path: Path) -> None:
     data_npz = ROOT / "data" / "processed" / "email_eu_core" / "kernel.npz"
     if not data_npz.exists():
         pytest.skip("email_eu_core data not present (run download_and_normalize.py --source email_eu_core)")
+    # Full email-Eu-core kernel can make this script slow (bootstrap/leverage); 10 min cap so suite can complete.
     r = subprocess.run(
         [sys.executable, str(ROOT / "scripts" / "run_email_eu_core_usecase_ii.py"), "--out-dir", str(tmp_path)],
         cwd=ROOT,
         capture_output=True,
         text=True,
+        timeout=600,
     )
     assert r.returncode in (0, 1), f"Script failed: {r.stderr}"
     report = tmp_path / "usecase_II_report.txt"
@@ -414,6 +417,23 @@ def test_build_public_findings_script(tmp_path: Path) -> None:
     assert "findings" in text.lower() or "FINDINGS" in text
 
 
+def test_run_event_linked_criterion_script(tmp_path: Path) -> None:
+    """PRD-34: run_event_linked_criterion.py produces event_linked_criterion_report.txt and run_report.md (output contract for review)."""
+    r = _run_script("run_event_linked_criterion.py", [], tmp_path)
+    assert r.returncode == 0, (r.stdout, r.stderr)
+    report = tmp_path / "event_linked_criterion_report.txt"
+    run_report = tmp_path / "run_report.md"
+    assert report.exists(), f"Missing {report}"
+    assert run_report.exists(), f"Missing {run_report}"
+    text = report.read_text()
+    assert "event_window" in text or "CF_t" in text or "HC_t" in text
+    assert "temporal_localization" in text or "localized" in text
+    assert "S_prime" in text or "baseline_discrimination" in text
+    assert "Falsification" in text or "falsification" in text
+    md = run_report.read_text()
+    assert "PRD-34" in md and "Falsification" in md
+
+
 def test_run_enron_timewindowed_pipeline_script(tmp_path: Path) -> None:
     """Deliverable 2 (organizational_empirical_validation.md): run_enron_timewindowed_pipeline.py produces report with HC_t, C2F_t, baselines."""
     enron_gz = ROOT / "data" / "raw" / "enron_snap" / "email-Enron.txt.gz"
@@ -452,6 +472,93 @@ def test_run_public_data_verification_script_fails_gracefully_without_data(tmp_p
     )
     assert r.returncode != 0
     assert "Missing" in r.stderr or "kernel.npz" in r.stderr or "FileNotFoundError" in r.stderr or "No such" in r.stderr
+
+
+def test_run_remote_compute_e2e_script_requires_api_key(tmp_path: Path) -> None:
+    """run_remote_compute_e2e.py exits non-zero when ANTHROPIC_API_KEY is not set (remote compute)."""
+    import numpy as np
+    kernel = tmp_path / "kernel.npz"
+    rng = np.random.default_rng(7)
+    n = 12
+    K = rng.uniform(0.1, 1.0, (n, n))
+    K = K / K.sum(axis=1, keepdims=True)
+    np.savez_compressed(kernel, K=K, labels=rng.integers(0, 3, n), mu=np.ones(n) / n)
+    payload_dir = tmp_path / "payloads"
+    payload_dir.mkdir()
+    subprocess.run(
+        [sys.executable, str(ROOT / "scripts/prepare_remote_compute_payload.py"),
+         "--dataset-npz", str(kernel), "--out-dir", str(payload_dir), "--max-nodes", "12",
+         "--n-bootstrap", "5", "--n-perm", "5"],
+        cwd=ROOT, capture_output=True, text=True, check=True,
+    )
+    env = {k: v for k, v in os.environ.items() if k != "ANTHROPIC_API_KEY"}
+    env["SKIP_DOTENV"] = "1"
+    r = subprocess.run(
+        [sys.executable, str(ROOT / "scripts/run_remote_compute_e2e.py"),
+         "--out-dir", str(tmp_path / "out"), "--payload-dir", str(payload_dir)],
+        cwd=ROOT, capture_output=True, text=True, env=env,
+    )
+    assert r.returncode != 0
+    assert "ANTHROPIC" in r.stderr or "Set" in r.stderr or "Payload not found" in r.stderr
+
+
+def test_run_email_eu_core_full_audit_script(tmp_path: Path) -> None:
+    """PRD-31: run_email_eu_core_full_audit.py produces full_audit_report.txt and run_report.md (synthetic when no data)."""
+    import numpy as np
+    kernel = tmp_path / "kernel.npz"
+    rng = np.random.default_rng(11)
+    n = 16
+    K = rng.uniform(0.1, 1.0, (n, n))
+    K = K / K.sum(axis=1, keepdims=True)
+    np.savez_compressed(kernel, K=K, labels=rng.integers(0, 3, n), mu=np.ones(n) / n)
+    r = subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "scripts/run_email_eu_core_full_audit.py"),
+            "--out-dir", str(tmp_path),
+            "--dataset-npz", str(kernel),
+            "--bootstrap", "5",
+            "--n-trials", "1",
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    assert r.returncode in (0, 1), (r.stdout, r.stderr)
+    report = tmp_path / "full_audit_report.txt"
+    run_report = tmp_path / "run_report.md"
+    assert report.exists(), f"Missing {report}"
+    assert run_report.exists(), f"Missing {run_report}"
+    text = report.read_text()
+    assert "mean_D" in text and "CI_lower" in text
+    assert "S_max" in text and "Leverage" in text
+    md = run_report.read_text()
+    assert "PRD-31" in md and "Rewire-null" in md
+
+
+def test_run_objective_ablation_script(tmp_path: Path) -> None:
+    """PRD-33: run_objective_ablation.py produces ablation_report.csv and run_report.md."""
+    r = subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "scripts/run_objective_ablation.py"),
+            "--out-dir", str(tmp_path),
+            "--n", "20",
+            "--seed", "13",
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    assert r.returncode == 0, (r.stdout, r.stderr)
+    csv_path = tmp_path / "ablation_report.csv"
+    run_report = tmp_path / "run_report.md"
+    assert csv_path.exists()
+    assert run_report.exists()
+    content = csv_path.read_text()
+    assert "variant" in content and "q_star_greedy" in content
+    assert "E_cl" in content and "Q" in content
+    assert "PRD-33" in run_report.read_text()
 
 
 def test_generate_verification_report_script_produces_domain_61_report() -> None:

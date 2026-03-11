@@ -24,6 +24,7 @@ This framework is released as an **open benchmark**, not a final verdict. It pro
 - [Benchmark & invitation](#benchmark--invitation-not-a-verdict) — Open benchmark, reproducible code, documented failures, explicit gates; we invite replication, criticism, and extension
 - [Groundwork & citation](#groundwork--citation) — Zenodo DOIs, public slide decks, and academic references
 - [Public docs & slide decks](#public-docs--slide-decks) — All materials in [public/](public/) with Zenodo DOIs
+- [Academic references (supporting literature)](#academic-references-supporting-literature) — Non–Aaron Vick citations with verified DOI/publisher links
 - [Exploratory simulations](#exploratory-simulations) — Boundary-coherence simulation runs ([docs/](docs/exploratory_simulations), [tests/](tests/exploratory_simulations))
 - [For AI agents (agentic instructions)](#for-ai-agents-agentic-instructions) — How to use this repo for org design, swarms, enterprise, and OpenClaw
 - [Current status](#current-status-hard-gate)
@@ -90,6 +91,68 @@ All public materials are in [public/](public/). Slide decks for the Zenodo works
 
 
 *To view slide decks, open the Zenodo record links above or the PDFs in [public/](public/) (Zenodo Preview/Download or a local PDF viewer).*
+
+### Academic references (supporting literature)
+
+The following academic works are cited in the dissertation and related materials as supporting literature (organizational theory, network science, TDA, automation, and systems theory). All links below are verified citation URLs (DOI or publisher).
+
+**Organizational theory & sensemaking**
+
+| Citation | Link |
+|----------|------|
+| March, J.G. & Simon, H.A. *Organizations.* Wiley, 1958. | [Cambridge review](https://www.cambridge.org/core/journals/american-political-science-review/article/abs/organizations-by-james-g-march-and-herbert-a-simon-with-the-collaboration-of-harold-guetzkow-new-york-john-wiley-and-sons-inc-london-chapman-and-hall-ltd-1958-pp-xi-262-600/6017E27AAE077C170FE0805D5976118F) |
+| Mintzberg, H. *The Structuring of Organizations.* Prentice Hall, 1979. | [WorldCat](https://www.worldcat.org/title/structuring-of-organizations/oclc/4492683) |
+| Weick, K. *Sensemaking in Organizations.* Sage, 1995. | [Sage](https://us.sagepub.com/en-us/nam/sensemaking-in-organizations/book205732) |
+| Vaughan, D. *The Challenger Launch Decision.* University of Chicago Press, 1996. | [DOI](https://doi.org/10.7208/chicago/9780226851785.001.0001) |
+| Argyris, C. & Schön, D. *Organizational Learning: A Theory of Action Perspective.* Addison-Wesley, 1978. | [WorldCat](https://www.worldcat.org/title/organizational-learning-a-theory-of-action-perspective/oclc/3163019) |
+| Senge, P. *The Fifth Discipline*, rev. ed. Doubleday, 2006. | [WorldCat](https://www.worldcat.org/title/fifth-discipline/oclc/318262215) |
+| Pfeffer, J. *New Directions for Organization Theory: Problems and Prospects.* Oxford University Press, 1997. | [OUP/RePEc](https://ideas.repec.org/b/oxp/obooks/9780195114348.html) |
+
+**Network science & social network analysis**
+
+| Citation | Link |
+|----------|------|
+| Barabási, A.-L. *Network Science.* Cambridge University Press, 2016. | [Free online](http://networksciencebook.com/) · [CUP](https://www.cambridge.org/us/universitypress/subjects/physics/statistical-physics/network-science?format=HB&isbn=9781107076266) |
+| Newman, M. *Networks*, 2nd ed. Oxford University Press, 2018. | [OUP](https://academic.oup.com/book/27303) |
+| Wasserman, S. & Faust, K. *Social Network Analysis: Methods and Applications.* Cambridge University Press, 1994. | [CUP](https://www.cambridge.org/us/universitypress/subjects/sociology/sociology-general-interest/social-network-analysis-methods-and-applications) |
+| Borgatti, S.P., Mehra, A., Brass, D.J. & Labianca, G. "Network Analysis in the Social Sciences." *Science* 323 (2009): 892–895. | [DOI](https://doi.org/10.1126/science.1165821) |
+| Cross, R., Borgatti, S.P. & Parker, A. "Making Invisible Work Visible." *California Management Review* 44, no. 2 (2002): 25–46. | [CMR](https://cmr.berkeley.edu/2002/02/44-2-making-invisible-work-visible-using-social-network-analysis-to-support-strategic-collaboration/) · [JSTOR](https://www.jstor.org/stable/41166121) |
+| Uzzi, B. & Spiro, J. "Collaboration and Creativity: The Small World Problem." *American Journal of Sociology* 111, no. 2 (2005): 447–504. | [DOI](https://doi.org/10.1086/432782) |
+| White, H.C., Boorman, S.A. & Breiger, R.L. "Social Structure from Multiple Networks. I. Blockmodels of Roles and Positions." *American Journal of Sociology* 81, no. 4 (1976): 730–780. | [DOI](https://doi.org/10.1086/226141) |
+| Burt, R.S. *Structural Holes: The Social Structure of Competition.* Harvard University Press, 1992. | [HUP](https://www.hup.harvard.edu/books/9780674843714) |
+| Doreian, P., Batagelj, V. & Ferligoj, A. *Generalized Blockmodeling.* Cambridge University Press, 2005. | [CUP](https://www.cambridge.org/us/universitypress/subjects/sociology/sociology-general-interest/generalized-blockmodeling) |
+
+**Community detection & spectral methods**
+
+| Citation | Link |
+|----------|------|
+| Newman, M.E.J. "Modularity and Community Structure in Networks." *PNAS* 103, no. 23 (2006): 8577–8582. | [DOI](https://doi.org/10.1073/pnas.0601602103) |
+| Blondel, V.D., Guillaume, J.-L., Lambiotte, R. & Lefebvre, E. "Fast Unfolding of Communities in Large Networks." *J. Stat. Mech.* 2008 (2008): P10008. | [DOI](https://doi.org/10.1088/1742-5468/2008/10/P10008) |
+| von Luxburg, U. "A Tutorial on Spectral Clustering." *Statistics and Computing* 17, no. 4 (2007): 395–416. | [DOI](https://doi.org/10.1007/s11222-007-9033-z) |
+
+**Topological data analysis & higher-order networks**
+
+| Citation | Link |
+|----------|------|
+| Carlsson, G. "Topology and Data." *Bulletin of the American Mathematical Society* 46, no. 2 (2009): 255–308. | [DOI](https://doi.org/10.1090/S0273-0979-09-01249-X) · [AMS](https://www.ams.org/journals/bull/2009-46-02/S0273-0979-09-01249-X/) |
+| Edelsbrunner, H. & Harer, J. *Computational Topology: An Introduction.* American Mathematical Society, 2010. | [AMS](https://bookstore.ams.org/mbk-69/) |
+| Benson, A.R., Gleich, D.F. & Leskovec, J. "Higher-Order Organization of Complex Networks." *Science* 353, no. 6295 (2016): 163–166. | [DOI](https://doi.org/10.1126/science.aad9029) |
+| Battiston, F. et al. "Networks Beyond Pairwise Interactions: Structure and Dynamics." *Physics Reports* 874 (2020): 1–92. | [DOI](https://doi.org/10.1016/j.physrep.2020.05.004) |
+| Holme, P. & Saramäki, J. "Temporal Networks." *Physics Reports* 519, no. 3 (2012): 97–125. | [DOI](https://doi.org/10.1016/j.physrep.2012.03.001) |
+
+**Automation, supervisory control & human–machine systems**
+
+| Citation | Link |
+|----------|------|
+| Parasuraman, R., Sheridan, T.B. & Wickens, C.D. "A Model for Types and Levels of Human Interaction with Automation." *IEEE Trans. Syst. Man Cybern. A* 30, no. 3 (2000): 286–297. | [DOI](https://doi.org/10.1109/3468.844354) · [IEEE Xplore](https://ieeexplore.ieee.org/document/844354) |
+| Sheridan, T.B. *Telerobotics, Automation, and Human Supervisory Control.* MIT Press, 1992. | [MIT Press](https://mitpress.mit.edu/9780262193342/telerobotics-automation-and-human-supervisory-control/) |
+
+**Systems theory & autopoiesis**
+
+| Citation | Link |
+|----------|------|
+| Maturana, H. & Varela, F. *Autopoiesis and Cognition: The Realization of the Living.* Reidel, 1980. | [WorldCat](https://www.worldcat.org/title/autopoiesis-and-cognition-the-realization-of-the-living/oclc/5844214) |
+| Luhmann, N. *Social Systems.* Stanford University Press, 1995. | [Stanford](https://www.sup.org/books/sociology/social-systems) |
 
 ---
 
